@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Storage Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.ios.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        // create array to store contentful image urls and the image data url after base64 conversion
+        var goblins = [];
+
+
+        // Wait for device API libraries to load
+        //
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            var imageUrl = "http://images.contentful.com/mft2fbi95x0j/50vuhUCxmwic4gkcA8siSA/eacfc614a45f8d9c7c35169ef6159c66/news.png";
+
+            // call conversion function with inline function to handle call back that retrieves the image data url
+            //
+            convertImgToBase64(imageUrl, function(base64Img){
+
+                // populate the image array
+                goblins.push({theid : imageUrl, thebase64 : base64Img});
+            });
+
+            // connect to the webSQL database and create it if it does not exist
+            //
+            var db = window.openDatabase("Anywhere", "1.0", "Anywhere App", 200000);
+
+            // call webSQL transaction to process image array
+            //
+            db.transaction(populateDB, errorCB, successCB);
+        }
+
+        // Populate the database with the contents of the image array
+        //
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS ANYWHERE_IMAGES');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS ANYWHERE_IMAGES (id unique, data)');
+
+            for (var i = 0; i < goblins.length; i++) {
+                tx.executeSql('INSERT INTO ANYWHERE_IMAGES (id, data) VALUES ("'+goblins[i].theid+'", "'+goblins[i].thebase64+'")');
+            }
+        }
+
+        // webSQL Transaction error callback
+        //
+        function errorCB(tx, err) {
+            alert("Error processing SQL: "+err);
+        }
+
+        // webSQL Transaction success callback
+        //
+        function successCB() {
+            alert("success!");
+        }
+
+        // function to convert image to base64 data url
+        // Creates a new canvas element to load the image then uses the canvas to create the data url
+        //
+        function convertImgToBase64(url, callback, outputFormat){
+
+            // create and prepare the canvas
+            //
+            var canvas = document.createElement('CANVAS');
+            var ctx = canvas.getContext('2d');
+            var img = new Image;
+            img.crossOrigin = 'Anonymous';
+            img.onload = function(){
+                canvas.height = img.height;
+                canvas.width = img.width;
+                ctx.drawImage(img,0,0);
+
+                // do the actual image to base64 conversion
+                //
+                var dataURL = canvas.toDataURL(outputFormat || 'image/jpeg');
+                callback.call(this, dataURL);
+                // Clean up
+                canvas = null;
+            };
+
+            // specify the image to load into the canvas
+            //
+            img.src = url;
+        }
+
+        // read images from webSQL and create elements to display them
+        function showImageInWebSQL(){
+            var db = window.openDatabase("Anywhere", "1.0", "Anywhere App", 200000);
+            db.transaction(function (tx) {
+                tx.executeSql('SELECT * FROM ANYWHERE_IMAGES', [], function (tx, results) {
+                    var len = results.rows.length, i;
+                    msg = "<p>Found rows: " + len + "</p>";
+                    for (i = 0; i < len; i++){
+                        document.getElementById("cats").setAttribute("src", results.rows.item(i).data);
+                    }
+                }, null);
+            });
+        }
+
+    </script>
+</head>
+<body>
+<h1>Example</h1>
+<p>Database</p>
+<input type="button" value="show image in webSQL" onclick="showImageInWebSQL();">
+<div id="thunder">
+    <img id="cats" src="">
+</div>
+<img src="">
+</body>
+</html>

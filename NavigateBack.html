@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kendo UI Snippet</title>
+
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.rtl.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.mobile.all.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.716/js/kendo.all.min.js"></script>
+</head>
+<body>
+
+<div id="foo" data-role="view">
+    <a data-role="button" href="#bar">Foo</a>
+</div>
+
+<div id="bar" data-role="view">
+    <a data-role="backbutton" data-click="onClick">Back</a>
+</div>
+
+<script>
+    var app = new kendo.mobile.Application();
+    function onClick(e) {
+//        e.preventDefault(); //prevent navigating back
+        alert("when does this fire....");
+    }
+</script>
+</body>
+</html>

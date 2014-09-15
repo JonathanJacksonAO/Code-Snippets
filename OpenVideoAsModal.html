@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="http://demos.telerik.com/kendo-ui/modalview/adaptive">
+    <style>html { font-size: 12px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.default.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2014.2.716/styles/kendo.default.mobile.min.css" rel="stylesheet" />
+    <script src="http://cdn.kendostatic.com/2014.2.716/js/jquery.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.716/js/angular.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.716/js/kendo.all.min.js"></script>
+</head>
+<body>
+
+<div >
+    <button type="button" id="modalview-trigger">Open the Video</button>
+</div>
+
+<div data-role="modalview" id="modalview-login">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Video</span>
+        </div>
+    </div>
+    <iframe id="player" type="text/html" width="640" height="480" src="//www.youtube.com/embed/qQrgv-oVfsI?version=3&feature=player_embedded&fs=1&modestbranding=1&rel=0&showinfo=0&theme=light&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+    <!--<iframe width="640px" height="480px" src="//www.youtube.com/embed/qQrgv-oVfsI?feature=player_embedded&fs=1&modestbranding=1&rel=0&showinfo=0&theme=light" frameborder="0" allowfullscreen></iframe>-->
+    <a onclick="closeModalViewLogin()" id="modalview-button" type="button">Close</a>
+</div>
+
+<style>
+    #modalview-button {
+        display: block;
+        margin: 0 auto 20px;
+        text-align: center;
+        font-weight: bold;
+        width: 90%;
+        height: 36px;
+        line-height: 36px;
+        vertical-align: middle;
+        background-color: #b23427;
+        color: #ffffff;
+    }
+    #modalview-button:hover:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+
+<script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '400',
+            width: '400',
+            videoId: 'M7lc1UVf-VE',
+            playerVars: {
+                autoplay: 0,
+                controls: 1
+            },
+            events: {
+                onReady: onPlayerReady,
+                onStateChange: onPlayerStateChange
+            }
+        });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+//        player.setPlaybackQuality("default");
+//        event.target.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+//        if (event.data == YT.PlayerState.PLAYING) {
+//            player.setSize("640", "480");
+//        }
+//        else {
+//            player.setSize("400", "400");
+//
+//        }
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
+
+
+    $(document).ready(function() {
+        $("#modalview-trigger").kendoButton();
+    });
+
+    function closeModalViewLogin() {
+        stopVideo();
+        player.seekTo(0,true);
+        $("#modalview-login").kendoMobileModalView("close");
+    }
+
+    $(function() {
+        $("#modalview-login").kendoMobileModalView();
+
+        $("#modalview-trigger").click(function() {
+            $("#modalview-login").kendoMobileModalView("open");
+        });
+    });
+</script>
+
+
+</body>
+</html>

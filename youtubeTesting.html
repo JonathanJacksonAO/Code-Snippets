@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script>
+        $(document).on("pagecreate",function(event){
+            $(window).on("orientationchange",function(event){
+//                alert("Orientation changed to: " + event.orientation);
+                resizeIframe(document.getElementById("iframeVideo"))
+            });
+        });
+    </script>
+</head>
+<body>
+<script text ="text/javascript">
+    function resizeIframe(obj) {
+        obj.height = window.innerHeight;
+        obj.width = window.innerWidth;
+    }
+</script>
+<iframe name="Video" src="//www.youtube.com/embed/Lrao9h_lwSA" frameborder="0" scrolling="no" id="iframeVideo" onload='javascript:resizeIframe(this);' />
+</body>
+</html>
