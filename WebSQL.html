@@ -3,41 +3,10 @@
 <head>
     <title>Storage Example</title>
 
-    <script type="text/javascript" charset="utf-8" src="cordova.ios.js"></script>
     <script type="text/javascript" charset="utf-8">
 
         // create array to store contentful image urls and the image data url after base64 conversion
         var goblins = [];
-
-
-        // Wait for device API libraries to load
-        //
-
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-        // device APIs are available
-        //
-        function onDeviceReady() {
-            var imageUrl = "http://images.contentful.com/mft2fbi95x0j/50vuhUCxmwic4gkcA8siSA/eacfc614a45f8d9c7c35169ef6159c66/news.png";
-
-            // call conversion function with inline function to handle call back that retrieves the image data url
-            //
-            convertImgToBase64(imageUrl, function(base64Img){
-
-                // populate the image array
-                goblins.push({theid : imageUrl, thebase64 : base64Img});
-                console.log("convertToBase64 sees " + goblins.length + " items in the array."); // todo Delete me!
-
-                // connect to the webSQL database and create it if it does not exist
-                //
-                var db = window.openDatabase("Anywhere", "1.0", "Anywhere App", 200000);
-
-                // call webSQL transaction to process image array
-                //
-                db.transaction(populateDB, errorCB, successCB);
-
-            });
-        }
 
         // Populate the database with the contents of the image array
         //
@@ -55,7 +24,7 @@
         // webSQL Transaction error callback
         //
         function errorCB(tx, err) {
-            alert("Error processing SQL: "+err);
+            alert("Error processing SQL: " + err + "\n " + tx.message);
         }
 
         // webSQL Transaction success callback
@@ -107,12 +76,46 @@
             });
         }
 
+        function saveImageToWebSQL(){
+            var imageUrl = "http://images.contentful.com/mft2fbi95x0j/50vuhUCxmwic4gkcA8siSA/eacfc614a45f8d9c7c35169ef6159c66/news.png";
+
+            // call conversion function with inline function to handle call back that retrieves the image data url
+            //
+            convertImgToBase64(imageUrl, function(base64Img){
+
+                // populate the image array
+                goblins.push({theid : imageUrl, thebase64 : base64Img});
+                console.log("convertToBase64 sees " + goblins.length + " items in the array."); // todo Delete me!
+
+                // connect to the webSQL database and create it if it does not exist
+                //
+                var db = window.openDatabase("Anywhere", "1.0", "Anywhere App", 200000);
+
+                // call webSQL transaction to process image array
+                //
+                db.transaction(populateDB, errorCB, successCB);
+
+            });
+        }
+
+        function dropImageInWebSQL() {
+            var db = window.openDatabase("Anywhere", "1.0", "Anywhere App", 200000);
+
+            // call webSQL transaction to process image array
+            //
+            db.transaction(function(tsql){
+                tsql.executeSql('DROP TABLE IF EXISTS ANYWHERE_IMAGES');
+            }, errorCB, successCB);
+        }
+
     </script>
 </head>
 <body>
 <h1>Example</h1>
 <p>Database</p>
+<input type="button" value="save image to webSQL" onclick="saveImageToWebSQL();">
 <input type="button" value="show image in webSQL" onclick="showImageInWebSQL();">
+<input type="button" value="drop images table in webSQL" onclick="dropImageInWebSQL();">
 <div id="thunder">
     <img id="cats" src="">
 </div>
