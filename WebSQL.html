@@ -26,15 +26,17 @@
 
                 // populate the image array
                 goblins.push({theid : imageUrl, thebase64 : base64Img});
+                console.log("convertToBase64 sees " + goblins.length + " items in the array."); // todo Delete me!
+
+                // connect to the webSQL database and create it if it does not exist
+                //
+                var db = window.openDatabase("Anywhere", "1.0", "Anywhere App", 200000);
+
+                // call webSQL transaction to process image array
+                //
+                db.transaction(populateDB, errorCB, successCB);
+
             });
-
-            // connect to the webSQL database and create it if it does not exist
-            //
-            var db = window.openDatabase("Anywhere", "1.0", "Anywhere App", 200000);
-
-            // call webSQL transaction to process image array
-            //
-            db.transaction(populateDB, errorCB, successCB);
         }
 
         // Populate the database with the contents of the image array
@@ -42,6 +44,8 @@
         function populateDB(tx) {
             tx.executeSql('DROP TABLE IF EXISTS ANYWHERE_IMAGES');
             tx.executeSql('CREATE TABLE IF NOT EXISTS ANYWHERE_IMAGES (id unique, data)');
+
+            console.log("populateDB sees " + goblins.length + " items in the array..."); // todo Delete me!
 
             for (var i = 0; i < goblins.length; i++) {
                 tx.executeSql('INSERT INTO ANYWHERE_IMAGES (id, data) VALUES ("'+goblins[i].theid+'", "'+goblins[i].thebase64+'")');
@@ -57,7 +61,7 @@
         // webSQL Transaction success callback
         //
         function successCB() {
-            alert("success!");
+//            alert("success!");
         }
 
         // function to convert image to base64 data url
