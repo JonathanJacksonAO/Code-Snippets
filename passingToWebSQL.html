@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" charset="utf-8">
+//        var imgId="";
+//        var imgURL="";
+
+        var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
+
+
+//        doInserts(insertValues);
+
+        function doInserts(insertValues) {
+            db.transaction(function(tx) {
+//                tx.executeSql('DROP TABLE IF EXISTS DEMO');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+                tx.executeSql('INSERT INTO DEMO (id, data) VALUES (?, ?)', insertValues.values, insertSuccess, insertFail);
+            });
+        }
+
+        function insertSuccess() {
+            console.log('insert success');
+        }
+
+        function insertFail(err) {
+            console.log('insertFail, err.message: ' + err.message);
+        }
+
+        function saveImageToWebSQL(id, data) {
+            var insertValues = {
+                values: [id, data]
+            };
+            doInserts(insertValues);
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="save image to webSQL" onclick="saveImageToWebSQL('12345', 'http://goblin.com');">
+</body>
+</html>
