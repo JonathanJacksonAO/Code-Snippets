@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({
+                    url: 'http://avalonweb2/auth/api/ntlm/omnia',
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader('X-AO-Api-Key', '0e9e157d-64d9-4f90-9397-027cdc70c6df');
+                    },
+                    success: function(){
+                        console.log("Booyah!");
+                    },
+                    error: function() {
+                        console.log("Boo hiss boo!");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>Click me</button>
+
+</body>
+</html>

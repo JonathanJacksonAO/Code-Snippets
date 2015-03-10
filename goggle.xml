@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="./goggle.xsl"?>
+<Matters>
+    <Directories>
+        <directory id="98000-0000041" name="$Recycle.Bin" />
+        <directory id="98000-0000041" name="Boot">
+            <file id="98000-0000041" name="BCD" />
+            <file id="98000-0000041" name="BCD.LOG" />
+            <file id="98000-0000041" name="BCD.LOG1" />
+            <file id="98000-0000041" name="BCD.LOG2" />
+            <file id="98000-0000041" name="BOOTSTAT.DAT" />
+            <file id="98000-0000041" name="memtest.exe" />
+        </directory>
+        <directory id="98000-0000041" name="Documents and Settings" />
+        <directory id="98000-0000041" name="inetpub" />
+        <directory id="98000-0000041" name="MSOCache" />
+        <directory id="98000-0000041" name="PerfLogs" />
+        <directory id="98000-0000041" name="Program Files">
+            <file id="98000-0000041" name="desktop.ini" />
+        </directory>
+        <directory id="98000-0000041" name="ProgramData">
+            <file id="98000-0000041" name="ntuser.pol" />
+        </directory>
+        <directory id="98000-0000041" name="Recovery" />
+        <directory id="98000-0000041" name="System Volume Information" />
+        <directory id="98000-0000041" name="Users">
+            <file id="98000-0000041" name="desktop.ini" />
+        </directory>
+        <directory id="98000-0000041" name="Windows">
+            <directory id="98000-0000041" name="System32">
+                <directory id="98000-0000041" name="drivers">
+                    <file id="98000-0000041" name="nicdrv32.dll" />
+                </directory>
+                <file id="98000-0000041" name="goblin.dll" />
+                <file id="98000-0000041" name="spiderman.dll" />
+            </directory>
+            <file id="98000-0000041" name="bfsvc.exe" />
+            <file id="98000-0000041" name="bootstat.dat" />
+            <file id="98000-0000041" name="DtcInstall.log" />
+            <file id="98000-0000041" name="Enterprise.xml" />
+            <file id="98000-0000041" name="explorer.exe" />
+            <file id="98000-0000041" name="HelpPane.exe" />
+            <file id="98000-0000041" name="hh.exe" />
+            <file id="98000-0000041" name="iis.log" />
+            <file id="98000-0000041" name="mib.bin" />
+            <file id="98000-0000041" name="notepad.exe" />
+            <file id="98000-0000041" name="PFRO.log" />
+            <file id="98000-0000041" name="regedit.exe" />
+            <file id="98000-0000041" name="setupact.log" />
+            <file id="98000-0000041" name="setuperr.log" />
+            <file id="98000-0000041" name="splwow64.exe" />
+            <file id="98000-0000041" name="Starter.xml" />
+            <file id="98000-0000041" name="system.ini" />
+            <file id="98000-0000041" name="twain.dll" />
+            <file id="98000-0000041" name="twain_32.dll" />
+            <file id="98000-0000041" name="twunk_16.exe" />
+            <file id="98000-0000041" name="twunk_32.exe" />
+            <file id="98000-0000041" name="vmgcoinstall.log" />
+            <file id="98000-0000041" name="win.ini" />
+            <file id="98000-0000041" name="WindowsShell.Manifest" />
+            <file id="98000-0000041" name="WindowsUpdate.log" />
+            <file id="98000-0000041" name="winhelp.exe" />
+            <file id="98000-0000041" name="winhlp32.exe" />
+            <file id="98000-0000041" name="WMSysPr9.prx" />
+            <file id="98000-0000041" name="write.exe" />
+            <file id="98000-0000041" name="_default.pif" />
+        </directory>
+    </Directories>
+</Matters>

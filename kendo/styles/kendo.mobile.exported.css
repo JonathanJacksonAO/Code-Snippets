@@ -1,0 +1,9 @@
+.km-ios7 .km-view .km-navbar {
+    background-color: rgb(178, 52, 39);
+}
+.km-ios7 .km-view .km-navbar .km-view-title > * {
+    color: rgb(255, 255, 255);
+}
+.km-ios7 .km-view .km-navbar .km-button .km-text {
+    color: rgb(255, 255, 255);
+}

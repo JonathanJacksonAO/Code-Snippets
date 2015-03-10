@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Contentful Test</title>
+
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="./libs/contentful/contentful-management.min.js"></script>
+    <script src="ContentfulTest.js"></script>
+
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="kendo/styles/kendo.mobile.exported.css" rel="stylesheet" />
+
+</head>
+<body>
+<div data-role="view" id="navbar-home" data-init="contcts" data-title="Contacts">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    <ul id="listview"></ul>
+</div>
+
+<script>
+    var app = new kendo.mobile.Application(document.body);
+</script>
+</body>
+</html>

@@ -6,34 +6,35 @@
     <script src="libs/q/q.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-        var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
-        var imageUrl = "http://images.contentful.com/mft2fbi95x0j/50vuhUCxmwic4gkcA8siSA/eacfc614a45f8d9c7c35169ef6159c66/news.png";
+//        var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
+//        var imageUrl = "http://images.contentful.com/mft2fbi95x0j/50vuhUCxmwic4gkcA8siSA/eacfc614a45f8d9c7c35169ef6159c66/news.png";
 
 
-        function doInserts(insertValues) {
+        function doWebSQLInserts(insertValues) {
+            var db = window.openDatabase("Anywhere", "1.0", "Anywhere App", 200000);
             db.transaction(function (tx) {
 //                tx.executeSql('DROP TABLE IF EXISTS DEMO');
-                tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-                tx.executeSql('INSERT INTO DEMO (id, data) VALUES (?, ?)', insertValues.values, insertSuccess, insertFail);
+                tx.executeSql('CREATE TABLE IF NOT EXISTS ANYWHERE_IMAGES (id unique, data)');
+                tx.executeSql('INSERT INTO ANYWHERE_IMAGES (id, data) VALUES (?, ?)', insertValues.values, webSQLInsertSuccess, webSQLInsertFail);
             });
         }
 
-        function insertSuccess() {
+        function webSQLInsertSuccess() {
             console.log('insert success');
         }
 
-        function insertFail(err) {
+        function webSQLInsertFail(err) {
             console.log('insertFail, err.message: ' + err.message);
         }
 
-        function saveImageToWebSQL(id, data) {
+        function saveImageDataToWebSQL(id, data) {
             var insertValues = {
                 values: [id, data]
             };
-            doInserts(insertValues);
+            doWebSQLInserts(insertValues);
         }
 
-        function getDataUrl() {
+        function getImageDataUrl(imageUrl) {
 
             convertImgToBase64(imageUrl)
                     .then(function (e) { // SUCCESS
@@ -93,7 +94,7 @@
     </script>
 </head>
 <body>
-<input type="button" value="save image to webSQL" onclick="saveImageToWebSQL('12345', 'http://goblin.com');">
-<input type="button" value="getDataUrl" onclick="getDataUrl();">
+<input type="button" value="save image to webSQL" onclick="saveImageDataToWebSQL('12345', 'http://goblin.com');">
+<input type="button" value="getDataUrl" onclick="getImageDataUrl('file://Users/jonathanjackson/Desktop/A&O%20Icon/Icon-76.png');">
 </body>
 </html>
