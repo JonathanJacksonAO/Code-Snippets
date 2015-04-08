@@ -1,9 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7b620d3-7973-4321-8cc9-0af74890182b" name="Default" comment="Got XSLT working properly with XML containing directory structure.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boggle.xsl" afterPath="$PROJECT_DIR$/boggle.xsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goggle.xml" afterPath="$PROJECT_DIR$/goggle.xml" />
+    <list default="true" id="e7b620d3-7973-4321-8cc9-0af74890182b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/AD FS.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/API Management.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Access Control.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Access.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Android Phone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/App generic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Application (blank).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Deprecated_PNGs/Application (generic).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Application Insights.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Application server.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Audio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Autoscaling.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Active Directory.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Batch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Cache including Redis.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Certificate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Files Service.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Marketplace.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Rights Management (RMS).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure SDK.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure SQL Database.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure Websites.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure alert.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure automation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure load balancer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Azure subscription.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Backup Service.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Backup, local.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Backup, online.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Bitbucket code source.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/BizTalk Services.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Bug.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Building.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Cable settop TV box.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Certificate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Checkmark success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Client application.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Cloud Service.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PPT/Cloud and Enterprise Symbols 2.0.ppt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/Cloud and Enterprise Symbols Instructions v2.2.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Cloud, Office 365.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Cloud.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Cluster server.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_VisioStencils/CnE_CloudV2.2.vss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_VisioStencils/CnE_DeprecatedV2.2.vss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_VisioStencils/CnE_DrawingV2.2.vss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_VisioStencils/CnE_EnterpriseV2.2.vss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_VisioStencils/CnE_GeneralSymbolsV2.2.vss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_VisioStencils/CnE_OtherMicrosoftProdV2.2.vss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_VisioStencils/CnE_VMs_by_FunctionV2.2.vss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Code file.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Code72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/CodePlex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Connectors.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Content Delivery Network (CDN).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Continous Cycle Circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Crossout failure.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Cut and paste.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Data Factory.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Database generic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Database server.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Database synchronization.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Device.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Direct Access (feature).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Document.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/DocumentDB.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Domain controller.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Dropbox code source.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Enterprise Building.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Event Hubs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Excel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Exchange.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Exel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/ExpressRoute.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/File, general.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Filter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Filter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Firewall.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Folder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Folder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Game Controller.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Gateway.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Gears.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Generic code.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Git repository.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/GitHub.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Graph.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Deprecated_PNGs/HDInsight (old).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/HDInsight.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Health monitoring.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Health monitoring.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Healthy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Healthy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Hybrid Connections (BizTalk).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Hybrid connection manager for BizTalk Hybrid Connection.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Import generic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Internet (hollow).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Internet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Key Vault.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Key, permissions.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Keyboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Laptop computer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Like.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Load Balancer white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Load balancer, generic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Lock, protected.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Lync.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Machine Learning.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Maintenance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Management console.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Media Services.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Message.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Microsoft Azure.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Microsoft account.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Microsoft.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Mobile Engagement.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Mobile Services.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Monitor running apps.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Monitor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Mouse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Multi-Factor Authentication.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/MySQL database.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Network card.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Not allowed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Notification Hubs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Notification topic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/OS image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Deprecated_PNGs/OS image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Office 365 subscription.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Office 365.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Operational Insights.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Outlook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Performance monitor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Performance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Phone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Plug and play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Pointer circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/PowerPoint.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Powershell script file.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Protocol stack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Queue, general.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/RMS connector.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/RemoteApp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Router.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/SQL Data Sync.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/SQL Database (generic).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Deprecated_PNGs/SQL Reporting.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Scheduler.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Script file.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Secure virtual machine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Server (blade).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Server (generic).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Server directory.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Server farm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Server rack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Service Bus Queue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Service Bus Relay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Service Bus Topic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Service Bus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Service Endpoint.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Service package.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Shared folder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Sharepoint.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Site Recovery.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Skype.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Slider bar, horizontal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Slider bar, vertical.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Smartcard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Startup task.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/StorSimple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Storage (Azure).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Storage blob.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Storage queue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Storage table.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Storage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Stream Analytics.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Table.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Table72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Tablet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Task List or backlog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Tasks.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Tool.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Traffic Manager.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Tunnel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/USB.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/USB.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Unidentified feature object.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/User.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/VHD data disk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Deprecated_PNGs/VHD old style.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/VHD.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/VM symbol only.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_GeneralSymbols_PNGs/Video.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Virtual Network.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Virtual machine container.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Virtual machine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Visio.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Visual Studio Online.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Web role.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Web roles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Web server.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Web.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/WebJobs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/WebSite (generic).png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Windows Server.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Wireless connection.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Word.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Work account.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Worker role.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/Worker roles.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/Workstation client.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/XBox One.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/XML web service.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_OtherMicrosoftProd_PNGs/Xbox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Enterprise_PNGs/lock unlocked, accessible.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/rdp remoting file.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Microsoft_CloudnEnterprise_Symbols_v2/CnE_PNGs/CnE_Cloud_PNGs/rpd Remoting file.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code Snippets.iws" />
@@ -43,8 +262,8 @@
       <file leaf-file-name="boggle.xsl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/boggle.xsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27108434" vertical-offset="0" max-vertical-offset="830">
-              <caret line="60" column="105" selection-start-line="60" selection-start-column="105" selection-end-line="60" selection-end-column="105" />
+            <state vertical-scroll-proportion="0.70481926" vertical-offset="0" max-vertical-offset="830">
+              <caret line="84" column="13" selection-start-line="83" selection-start-column="17" selection-end-line="84" selection-end-column="13" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
               </folding>
@@ -88,6 +307,7 @@
         <option value="$PROJECT_DIR$/goggle.xsl" />
         <option value="$PROJECT_DIR$/goggle.xml" />
         <option value="$PROJECT_DIR$/boggle.xsl" />
+        <option value="$PROJECT_DIR$/Trashbat.html" />
       </list>
     </option>
   </component>
@@ -142,34 +362,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ed209" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code Snippets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ed209" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code Snippets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ed209" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -352,7 +544,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428485519317</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added matter parent to XSLT.">
+      <created>1428492706524</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1428492706524</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -385,7 +583,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23533246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23533246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -420,7 +618,8 @@
     <MESSAGE value="Passing values in..." />
     <MESSAGE value="Refactor to use promises with the base64 image conversion." />
     <MESSAGE value="Got XSLT working properly with XML containing directory structure." />
-    <option name="LAST_COMMIT_MESSAGE" value="Got XSLT working properly with XML containing directory structure." />
+    <MESSAGE value="Added matter parent to XSLT." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added matter parent to XSLT." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -429,13 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/localstorageSizing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="345">
-          <caret line="8" column="6" selection-start-line="7" selection-start-column="0" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/youtubeTesting.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="480">
@@ -786,8 +978,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/boggle.xsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27108434" vertical-offset="0" max-vertical-offset="830">
-          <caret line="60" column="105" selection-start-line="60" selection-start-column="105" selection-end-line="60" selection-end-column="105" />
+        <state vertical-scroll-proportion="0.70481926" vertical-offset="0" max-vertical-offset="830">
+          <caret line="84" column="13" selection-start-line="83" selection-start-column="17" selection-end-line="84" selection-end-column="13" />
           <folding>
             <element signature="n#head#0;n#html#0;n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
           </folding>
