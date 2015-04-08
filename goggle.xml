@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="./goggle.xsl"?>
+<?xml-stylesheet type="text/xsl" href="./boggle.xsl"?>
 <Matters>
     <Directories>
         <directory id="98000-0000041" name="$Recycle.Bin" />

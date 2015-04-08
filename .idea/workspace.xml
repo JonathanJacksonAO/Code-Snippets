@@ -2,43 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7b620d3-7973-4321-8cc9-0af74890182b" name="Default" comment="Refactor to use promises with the base64 image conversion.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/images/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/document.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/folder.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/folderClosed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/folderOpen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/images/kendoui.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/images/kendoui.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/images/wp8_icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/images/wp8_inverseicons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/AO_Kendo_Skin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/CollapsibleLists.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ContentfulTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ContentfulTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Goblins.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Responsive.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Responsive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/js/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/contentful/contentful-management.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/contentful/contentful.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/js/everlive.all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goggle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goggle.xsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/typescript/jquery.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/kendo.mobile.all.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/typescript/kendo.mobile.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/kendo.mobile.exported.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/js/kendo.mobile.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kendo/styles/images/kendoui.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebSQL.html" afterPath="$PROJECT_DIR$/WebSQL.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convertImageToBase64ThenSaveToWebSQL.html" afterPath="$PROJECT_DIR$/convertImageToBase64ThenSaveToWebSQL.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boggle.xsl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goggle.xml" afterPath="$PROJECT_DIR$/goggle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goggle.xsl" afterPath="$PROJECT_DIR$/goggle.xsl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/youtubeTesting.html" afterPath="$PROJECT_DIR$/youtubeTesting.html" />
     </list>
     <ignored path="Code Snippets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,9 +32,23 @@
       <file leaf-file-name="goggle.xsl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/goggle.xsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53257793" vertical-offset="674" max-vertical-offset="1380">
-              <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
-              <folding />
+            <state vertical-scroll-proportion="0.09014423" vertical-offset="0" max-vertical-offset="832">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boggle.xsl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boggle.xsl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+              <caret line="70" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="17" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +56,8 @@
       <file leaf-file-name="goggle.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goggle.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1110">
-              <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="1110">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -85,8 +66,8 @@
       <file leaf-file-name="Goblins.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Goblins.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="525">
-              <caret line="14" column="4" selection-start-line="12" selection-start-column="0" selection-end-line="27" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="525">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -105,8 +86,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/goggle.xsl" />
         <option value="$PROJECT_DIR$/goggle.xml" />
+        <option value="$PROJECT_DIR$/boggle.xsl" />
+        <option value="$PROJECT_DIR$/goggle.xsl" />
       </list>
     </option>
   </component>
@@ -114,10 +96,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="5" />
-    <option name="y" value="29" />
-    <option name="width" value="1392" />
-    <option name="height" value="824" />
+    <option name="x" value="340" />
+    <option name="y" value="319" />
+    <option name="width" value="1555" />
+    <option name="height" value="950" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -145,6 +127,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,15 +176,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="http.proxy" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/usr/bin/git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
@@ -389,28 +371,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="29" width="1392" height="824" extended-state="6" />
+    <frame x="340" y="319" width="1555" height="950" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905138" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26331145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23533246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32677165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32677165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39763778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32519686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32519686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -436,19 +418,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Goblins.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/localstorageSizing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="345">
@@ -780,25 +754,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Goblins.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="525">
-          <caret line="14" column="4" selection-start-line="12" selection-start-column="0" selection-end-line="27" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="525">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goggle.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1110">
-          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boggle.xsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="70" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="17" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goggle.xsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53257793" vertical-offset="674" max-vertical-offset="1380">
-          <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
-          <folding />
+        <state vertical-scroll-proportion="0.09014423" vertical-offset="0" max-vertical-offset="832">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
