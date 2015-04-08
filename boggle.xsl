@@ -55,6 +55,18 @@
         </html>
         <xsl:apply-templates />
     </xsl:template>
+    <xsl:template name="matter" match="matter">
+        <ul class="collapsibleList">
+            <li>
+                <xsl:value-of select="@name"></xsl:value-of> (<xsl:value-of select="@id"></xsl:value-of>)
+                <ul>
+                    <xsl:for-each select="directory">
+                        <xsl:call-template name="directory"></xsl:call-template>
+                    </xsl:for-each>
+                </ul>
+            </li>
+        </ul>
+    </xsl:template>
     <xsl:template name="directory" match="directory">
         <ul class="collapsibleList">
             <li>
