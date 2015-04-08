@@ -5,28 +5,6 @@
         <html>
             <head>
                 <style>
-                    .directory {
-                    font-size: 1.0em;
-                    color: #b23427;
-                    font-family: Georgia,'Palatino Linotype','Times New Roman',Times,serif;
-                    font-weight: normal;
-                    padding-left: 22px; /* width of the image plus a little extra padding */
-                    display: block; /* may not need this, but I've found I do */
-                    }
-                    li.d {
-                    list-style-image: url("img/folder.jpg");
-                    }
-                    .file {
-                    font-size: 1.0em;
-                    color: #b23427;
-                    font-family: Georgia,'Palatino Linotype','Times New Roman',Times,serif;
-                    font-weight: normal;
-                    padding-left: 40px; /* width of the image plus a little extra padding */
-                    display: block; /* may not need this, but I've found I do */
-                    }
-                    li.f {
-                    list-style-image: url("img/document.png");
-                    }
                     .collapsibleList li{
                     list-style-image:url('img/document.png');
                     cursor:auto;
