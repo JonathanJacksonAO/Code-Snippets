@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <script type="text/javascript" src="libs/CollapsibleLists.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            CollapsibleLists.apply();
-        }, false);
+    <style>
+        .collapsibleList.directoryList li{
+            list-style-image:url('img/folder_10x10_large_gray.gif');
+        }
+        .collapsibleList.fileList li{
+            list-style-image:url('img/document.png');
+        }
+        .collapsibleList li > input + * {
+            display: none;
+        }
+        .collapsibleList li > input:checked + * {
 
-    </script>
+            display: block;
+        }
+        .collapsibleList li > input {
+            list-style-image:url('img/folderOpen.png');
+            display: none;
+        }
+        .collapsibleList label {
+            cursor: pointer;
+        }
+        ul {
+             padding-left: 25px;
+         }
+        .Header {
+            border: 0;
+            top: 0;
+            height: 80px;
+            background:url('img/allen_overy_logo.png') no-repeat;
+            /*background: #b23427;*/
+        }
+        .subHeader {
+            border: 0;
+            top: 0;
+            height: 40px;
+            background: #d8e3e9;
+        }
+        .subHeader span {
+            font-family: Georgia;
+            font-size: 25px;
+            font-weight: normal;
+            color: #373839;
+            padding-top: 10px;
+            position: absolute;
+            right: 15px;
+        }
+    </style>
 </head>
 <body>
-<ul class="collapsibleList">
+<div class="Header"></div>
+<div class="subHeader">
+    <span>Virtual File Export</span>
+</div>
+<ul class="collapsibleList directoryList">
     <li>
-        Parent item
+        <label for="mylist-node1">Click to open list 1</label>
+        <input type="checkbox" id="mylist-node1" />
         <ul>
-            <li>Child item</li>
-            <li>Child item</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
         </ul>
     </li>
     <li>
-        Parent item
+        <label for="mylist-node2">Click to open list 2</label>
+        <input type="checkbox" id="mylist-node2" />
         <ul>
-            <li>Child item</li>
-            <li>Child item</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
         </ul>
     </li>
 </ul>

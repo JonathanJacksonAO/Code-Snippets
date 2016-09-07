@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Heat Map</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="./libs/DataMaps/datamaps.world.min.js"></script>
+    <script src="./libs/jquery3/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+<div id="container" style="width: auto; height: 500px;"></div>
+<script>
+    var xmlFeed = "./HeatmapData/ItemData.xml";
+
+    /* xml data */
+    var xml;
+
+    var columns = {};
+    var columnIds = {};
+    var riskTopics = [];
+
+    loadSheetData();
+
+    function loadSheetData()
+    {
+        $.ajax({
+            url: xmlFeed,
+            dataType: "xml",
+            success: function(data) {
+                xml = data;
+                console.log("xml",xml);
+                getColumnInfo();
+            },
+            error: function() {
+                alert("Error loading iSheet data.  The map will not be displayed.");
+                return;
+            }
+        });
+    } // end loadSheetData
+
+    function getColumnInfo()
+    {
+        var xmlColumns = $('head',xml);
+
+        console.log("xmlColumns",xmlColumns);
+
+        xmlColumns.find('headColumn').each(function() {
+
+            var columnName = $(this).find('columnValue').text();
+            var columnID = $(this).attr('columnid');
+
+            columnIds[columnName] = columnID;
+            columns[columnID] = columnName;
+
+            console.log("column", columnName, columnID);
+
+            if(columnName != "Name of Jurisdiction" && columnName != "Country Code")
+            {
+                riskTopics.push(columnName);
+            }
+
+        }); // end loop
+
+        console.log("riskTopics",riskTopics);
+
+        /* Add the topics to the pull down menu */
+//        for(var i = 0; i != riskTopics.length; ++i)
+//        {
+//            $("#risk-topic").append(new Option(riskTopics[i],riskTopics[i]));
+//        }
+
+        // load the map data
+        //getMapData();
+    } // end getColumnInfo
+
+    var map = new Datamap({
+        element: document.getElementById('container'),
+        geographyConfig: {
+            highlightOnHover: false,
+            popupTemplate: function(geography, data) { //this function should just return a string
+                return '<div class="hoverinfo"><strong>' + geography.id + '</strong></div>';
+            },
+            popupOnHover: true
+        },
+        fills: {
+            RED: '#9a301d',
+            AMBER: '#ffcc00',
+            GREEN: '#005c4c',
+            UNKNOWN: 'rgb(0,0,0)',
+            defaultFill: 'grey'
+        }
+//        ,
+//        data: {
+//            IRL: {
+//                fillKey: 'GREEN',
+//                numberOfThings: 2002
+//            },
+//            USA: {
+//                fillKey: 'AMBER',
+//                numberOfThings: 10381
+//            },
+//            GBR: {
+//                fillKey: 'RED',
+//                numberOfThings: 10381
+//            },
+//            DEU: {
+//                fillKey: 'RED',
+//                numberOfThings: 10381
+//            },
+//            GHA: {
+//                fillKey: 'AMBER',
+//                numberOfThings: 10381
+//            }
+//        }
+    });
+
+    map.updateChoropleth({
+        USA: {fillKey: 'GREEN'},
+        CAN: '#0fa0fa'
+    });
+
+    map.updateChoropleth({
+        GBR: {fillKey: 'RED'}
+    });
+
+</script>
+</body>
+</html>

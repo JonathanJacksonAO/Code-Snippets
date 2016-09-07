@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="MarginMatrixTransform.xsl"?>
+<items>
+    <item externalID="3">
+        <column sequence="0">
+            <rawData>
+                <text><![CDATA[0001111]]></text>
+            </rawData>
+        </column>
+        <column sequence="1">
+            <rawData>
+                <text><![CDATA[Handover Client Name]]></text>
+            </rawData>
+        </column>
+        <column sequence="2">
+            <rawData>
+                <text><![CDATA[No]]></text>
+            </rawData>
+        </column>
+        <column sequence="3">
+            <rawData>
+                <text><![CDATA[No Special Arrangements for this imported client]]></text>
+            </rawData>
+        </column>
+        <column sequence="4">
+            <rawData>
+                <text><![CDATA[1111100]]></text>
+            </rawData>
+        </column>
+        <column sequence="5">
+            <rawData>
+                <text><![CDATA[111232323123]]></text>
+            </rawData>
+        </column>
+        <column sequence="6">
+            <rawData>
+                <text><![CDATA[Imported Matter Name]]></text>
+            </rawData>
+        </column>
+        <column sequence="7">
+            <rawData>
+                <text><![CDATA[crap]]></text>
+            </rawData>
+        </column>
+        <column sequence="8">
+            <rawData>
+                <text><![CDATA[Stuff]]></text>
+            </rawData>
+        </column>
+
+    </item>
+
+    <item externalID="4">
+        <column sequence="0">
+            <rawData>
+                <text><![CDATA[9999999]]></text>
+            </rawData>
+        </column>
+        <column sequence="1">
+            <rawData>
+                <text><![CDATA[XXXXX Client Name]]></text>
+            </rawData>
+        </column>
+        <column sequence="2">
+            <rawData>
+                <text><![CDATA[No]]></text>
+            </rawData>
+        </column>
+        <column sequence="3">
+            <rawData>
+                <text><![CDATA[Billed]]></text>
+            </rawData>
+        </column>
+        <column sequence="4">
+            <rawData>
+                <text><![CDATA[0009822]]></text>
+            </rawData>
+        </column>
+        <column sequence="5">
+            <rawData>
+                <text><![CDATA[00927671]]></text>
+            </rawData>
+        </column>
+        <column sequence="6">
+            <rawData>
+                <text><![CDATA[Test Matter Name]]></text>
+            </rawData>
+        </column>
+        <column sequence="7">
+            <rawData>
+                <text><![CDATA[Paris]]></text>
+            </rawData>
+        </column>
+        <column sequence="8">
+            <rawData>
+                <text><![CDATA[Junk]]></text>
+            </rawData>
+        </column>
+    </item>
+</items>

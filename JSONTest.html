@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <SCRIPT LANGUAGE="JavaScript">
+        function addTrainingLink (form) {
+            var tLinkID = form.idtextinput.value;
+            var tLinkName = form.nametextinput.value;
+            var tLindDesc = form.desctextinput.value;
+
+            var jFile = $.getJSON('eLearningCourses.JSON', function(result){
+                var newTrainingLink = {
+                    "id": "VinciWorks-" + tLinkID,
+                    "name": tLinkName,
+                    "description": tLindDesc,
+                    "image": "img/secrecy-icon-32x32.png",
+                    "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                    "form": {
+                        "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                        "method": "post",
+                        "inputs": [
+                            {
+                                "type": "text",
+                                "name": "userref",
+                                "value": ":employeeId"
+                            },
+                            {
+                                "type": "text",
+                                "name": "courseId",
+                                "value": tLinkID
+                            }
+                        ]
+                    }
+                };
+
+                alert(JSON.stringify(newTrainingLink));
+                result.push(newTrainingLink);
+
+                alert(JSON.stringify(result));
+            });
+//            var pJFile = JSON.parse(jFile);
+//            alert(JSON.stringify(jFile));
+
+
+
+
+//            jFile[0].push(newTrainingLink);
+//            var sJFile = JSON.stringify(pJFile);
+
+//            alert (JSON.stringify(sJFile));
+            form.nametextinput.value = "";
+            form.idtextinput.value = "";
+            form.desctextinput.value = "";
+        }
+
+        function clearForm (form) {
+            form.nametextinput.value = "";
+            form.idtextinput.value = "";
+            form.desctextinput.value = "";
+        }
+    </SCRIPT>
+</head>
+<body>
+
+<div class="container">
+    <h2>Modal Example</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add an eLearning training link</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <fieldset>
+
+                            <!-- Text input-->
+                            <div class="control-group">
+                                <label class="control-label" for="idtextinput">Training link ID</label>
+
+                                <div class="controls">
+                                    <input id="idtextinput" name="idtextinput" type="text" placeholder="9999"
+                                           class="input-xlarge">
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="control-group">
+                                <label class="control-label" for="nametextinput">Training link Name</label>
+
+                                <div class="controls">
+                                    <input id="nametextinput" name="nametextinput" type="text"
+                                           placeholder="Introduction to..." class="input-xlarge">
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="control-group">
+                                <label class="control-label" for="desctextinput">Training link Description</label>
+
+                                <div class="controls">
+                                    <input id="desctextinput" name="desctextinput" type="text"
+                                           placeholder="Introduction to..." class="input-xlarge">
+                                </div>
+                            </div>
+
+                            <!-- Button (Double) -->
+                            <label class="control-label" for="button1id"></label>
+
+                            <div class="controls">
+                                <button id="button1id" name="button1id" class="btn btn-info" data-dismiss="modal" onclick="addTrainingLink(this.form)">Add link
+                                </button>
+                                <button id="button2id" name="button2id" class="btn btn-danger" data-dismiss="modal" onclick="clearForm(this.form)">Cancel
+                                </button>
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

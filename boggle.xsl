@@ -31,7 +31,7 @@
 
             </body>
         </html>
-        <xsl:apply-templates />
+        <xsl:apply-templates/>
     </xsl:template>
     <xsl:template name="matter" match="matter">
         <ul class="collapsibleList">

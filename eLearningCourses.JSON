@@ -1,0 +1,241 @@
+[
+            {
+                "id": "VinciWorks-1001",
+                "name": "Marketing's Branding",
+                "description": "Marketing's Branding course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1001"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1036",
+                "name": "Introduction to our visual identity",
+                "description": "Introduction to our visual identity course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1036"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1038",
+                "name": "Choosing images and colours",
+                "description": "Choosing images and colours course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1038"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1039",
+                "name": "Using logos and co-branding",
+                "description": "Using logos and co-branding course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1039"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1040",
+                "name": "Creating an effective brief",
+                "description": "Creating an effective brief course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1040"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1041",
+                "name": "Introduction to our written identity",
+                "description": "Introduction to our written identity course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1041"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1042",
+                "name": "Communicating effectively",
+                "description": "Communicating effectively course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1042"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1043",
+                "name": "Ensuring readability",
+                "description": "Ensuring readability course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1043"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1044",
+                "name": "Creating impact",
+                "description": "Creating impact course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1044"
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "VinciWorks-1045",
+                "name": "Writing exercises",
+                "description": "Writing exercises course",
+                "image": "img/secrecy-icon-32x32.png",
+                "manualLink": "http://int.onlinecompliance.org/aao17int/",
+                "form": {
+                    "action": "https://secure.onlinecompliance.org/aao17int/coursegateway.aspx",
+                    "method": "post",
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "userref",
+                            "value": ":employeeId"
+                        },
+                        {
+                            "type": "text",
+                            "name": "courseId",
+                            "value": "1045"
+                        }
+                    ]
+                }
+            }
+        ]

@@ -1,67 +1,46 @@
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="./boggle.xsl"?>
-<matter id="0098000-0000041" name="IT BUSINESS SOLUTIONS MGT">
-    <directory id="98000-0000041" name="$Recycle.Bin"/>
-    <directory id="98000-0000041" name="Boot">
-        <file id="98000-0000041" name="BCD"/>
-        <file id="98000-0000041" name="BCD.LOG"/>
-        <file id="98000-0000041" name="BCD.LOG1"/>
-        <file id="98000-0000041" name="BCD.LOG2"/>
-        <file id="98000-0000041" name="BOOTSTAT.DAT"/>
-        <file id="98000-0000041" name="memtest.exe"/>
-    </directory>
-    <directory id="98000-0000041" name="Documents and Settings"/>
-    <directory id="98000-0000041" name="inetpub"/>
-    <directory id="98000-0000041" name="MSOCache"/>
-    <directory id="98000-0000041" name="PerfLogs"/>
-    <directory id="98000-0000041" name="Program Files">
-        <file id="98000-0000041" name="desktop.ini"/>
-    </directory>
-    <directory id="98000-0000041" name="ProgramData">
-        <file id="98000-0000041" name="ntuser.pol"/>
-    </directory>
-    <directory id="98000-0000041" name="Recovery"/>
-    <directory id="98000-0000041" name="System Volume Information"/>
-    <directory id="98000-0000041" name="Users">
-        <file id="98000-0000041" name="desktop.ini"/>
-    </directory>
-    <directory id="98000-0000041" name="Windows">
-        <directory id="98000-0000041" name="System32">
-            <directory id="98000-0000041" name="drivers">
-                <file id="98000-0000041" name="nicdrv32.dll"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="boggle.xsl"?>
+<matter id="0098000-0000024" name="OMNIA PROGRAMMES">
+    <directory id="4268727" library="D1_BK" name="another folder created by devtest25" parentid="0"/>
+    <directory id="4267672" library="D1_BK" name="Banking - Global Loans" parentid="0">
+        <directory id="4267682" library="D1_BK" name="Acquisition Arrangements" parentid="4267672">
+            <directory id="4268729" library="D1_BK" name="new sub" parentid="4267682">
+                <directory id="4268730" library="D1_BK" name="new sub" parentid="4268729">
+                    <directory id="4268731" library="D1_BK" name="another new sub" parentid="4268730"/>
+                </directory>
             </directory>
-            <file id="98000-0000041" name="goblin.dll"/>
-            <file id="98000-0000041" name="spiderman.dll"/>
         </directory>
-        <file id="98000-0000041" name="bfsvc.exe"/>
-        <file id="98000-0000041" name="bootstat.dat"/>
-        <file id="98000-0000041" name="DtcInstall.log"/>
-        <file id="98000-0000041" name="Enterprise.xml"/>
-        <file id="98000-0000041" name="explorer.exe"/>
-        <file id="98000-0000041" name="HelpPane.exe"/>
-        <file id="98000-0000041" name="hh.exe"/>
-        <file id="98000-0000041" name="iis.log"/>
-        <file id="98000-0000041" name="mib.bin"/>
-        <file id="98000-0000041" name="notepad.exe"/>
-        <file id="98000-0000041" name="PFRO.log"/>
-        <file id="98000-0000041" name="regedit.exe"/>
-        <file id="98000-0000041" name="setupact.log"/>
-        <file id="98000-0000041" name="setuperr.log"/>
-        <file id="98000-0000041" name="splwow64.exe"/>
-        <file id="98000-0000041" name="Starter.xml"/>
-        <file id="98000-0000041" name="system.ini"/>
-        <file id="98000-0000041" name="twain.dll"/>
-        <file id="98000-0000041" name="twain_32.dll"/>
-        <file id="98000-0000041" name="twunk_16.exe"/>
-        <file id="98000-0000041" name="twunk_32.exe"/>
-        <file id="98000-0000041" name="vmgcoinstall.log"/>
-        <file id="98000-0000041" name="win.ini"/>
-        <file id="98000-0000041" name="WindowsShell.Manifest"/>
-        <file id="98000-0000041" name="WindowsUpdate.log"/>
-        <file id="98000-0000041" name="winhelp.exe"/>
-        <file id="98000-0000041" name="winhlp32.exe"/>
-        <file id="98000-0000041" name="WMSysPr9.prx"/>
-        <file id="98000-0000041" name="write.exe"/>
-        <file id="98000-0000041" name="_default.pif"/>
+        <directory id="4267683" library="D1_BK" name="Amendments/Waivers" parentid="4267672"/>
+        <directory id="4267679" library="D1_BK" name="Ancillary/Overdraft Facilities" parentid="4267672"/>
+        <directory id="4273705" library="D1_BK" name="another sub folder" parentid="4267672"/>
+        <directory id="4267684" library="D1_BK" name="Bible" parentid="4267672"/>
+        <directory id="4267675" library="D1_BK" name="Debt Arrangements" parentid="4267672"/>
+        <directory id="4267673" library="D1_BK" name="Management" parentid="4267672"/>
+        <directory id="4267676" library="D1_BK" name="Security Arrangements" parentid="4267672"/>
+        <directory id="4267681" library="D1_BK" name="Syndication/Secondary Trading" parentid="4267672"/>
+        <directory id="4267674" library="D1_BK" name="Term Sheet/Mandate Letter/Fee Letters" parentid="4267672"/>
+        <directory id="4267680" library="D1_BK" name="Transaction Structure" parentid="4267672"/>
     </directory>
+    <directory id="4296715" library="D1_BK" name="Colleen" parentid="0"/>
+    <directory id="4267766" library="D1_BK" name="daves" parentid="0">
+        <directory id="4273705" library="D1_BK" name="another sub folder" parentid="4267766"/>
+        <directory id="4267767" library="D1_BK" name="dave2" parentid="4267766"/>
+    </directory>
+    <directory id="4296023" library="D1_BK" name="ML Remove Test" parentid="0"/>
+    <directory id="4296766" library="D1_BK" name="new cm folder" parentid="0"/>
+    <directory id="4267665" library="D1_BK" name="new folder for caching test" parentid="0">
+        <directory id="4267666" library="D1_BK" name="subfolder" parentid="4267665"/>
+    </directory>
+    <directory id="4268724" library="D1_BK" name="renamed by devtest25" parentid="0">
+        <directory id="4268725" library="D1_BK" name="subfolder by mitchelc" parentid="4268724"/>
+    </directory>
+    <directory id="4273750" library="D1_BK" name="sub" parentid="0"/>
+    <directory id="4266975" library="D1_BK" name="top" parentid="0">
+        <directory id="4266976" library="D1_BK" name="child" parentid="4266975">
+            <directory id="4266977" library="D1_BK" name="grandchild" parentid="4266976">
+                <directory id="4266978" library="D1_BK" name="great grandchild" parentid="4266977"/>
+            </directory>
+        </directory>
+    </directory>
+    <directory id="4267685" library="D1_BK" name="Transaction Closing Schedule" parentid="0"/>
 </matter>

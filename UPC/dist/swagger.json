@@ -1,0 +1,170 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Version 1 of Public Api to access UPC CMS data",
+    "version" : "v1",
+    "title" : "UPC CMS Public API",
+    "contact" : {
+      "name" : "Daniele Franceschi,Alessandro Valentini",
+      "url" : "http://www.netserv.it",
+      "email" : "d.franceshi@netserv.it,a.valentini@netserv.it"
+    }
+  },
+  "host" : "netservice-prod.apigee.net",
+  "basePath" : "/upc/public/api/v1",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/caseTypes" : {
+      "get" : {
+        "summary" : "Search case types",
+        "description" : "Search the cases types ",
+        "operationId" : "caseTypes",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cases" : {
+      "get" : {
+        "summary" : "Search cases",
+        "description" : "Search the cases inside the CMS",
+        "operationId" : "search",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "number",
+          "in" : "query",
+          "description" : "number of the case",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "year",
+          "in" : "query",
+          "description" : "year of the case",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "type",
+          "in" : "query",
+          "description" : "type of the case ( as /types api returned list)",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "patent",
+          "in" : "query",
+          "description" : "patent of the case",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "modifiedSince",
+          "in" : "query",
+          "description" : "modfied since",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "from",
+          "in" : "query",
+          "description" : "result from number",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "to",
+          "in" : "query",
+          "description" : "result to number",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documents/download/{id}" : {
+      "get" : {
+        "summary" : "Download a document",
+        "description" : "Download a document",
+        "operationId" : "download",
+        "produces" : [ "application/octet-stream" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "id of the document",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string",
+                "format" : "byte"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documents/{type}/{number}/{year}" : {
+      "get" : {
+        "summary" : "Search all documents of a specific case",
+        "description" : "Search the documents of a specific case",
+        "operationId" : "search",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "type",
+          "in" : "path",
+          "description" : "case type",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "number",
+          "in" : "path",
+          "description" : "number of the case",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "year",
+          "in" : "path",
+          "description" : "year of the case",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "onlyCover",
+          "in" : "query",
+          "description" : "get only cover documents",
+          "required" : false,
+          "type" : "boolean"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

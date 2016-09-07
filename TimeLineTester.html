@@ -1,0 +1,156 @@
+<script src="./flag/flag_3218.action"></script>
+<link href="./flag/flag_3217.action" rel="stylesheet" type="text/css" />
+<style type="text/css">body, html, input {
+    font-family: sans-serif;
+    font-size: 12pt;
+}
+
+#visualization {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    z-index: 9999;
+}
+</style>
+<div id="visualization">
+    <div class="menu"><input id="zoomIn" type="button" value="Zoom in" /> <input id="zoomOut" type="button" value="Zoom out" /> <input id="moveLeft" type="button" value="Move left" /> <input id="moveRight" type="button" value="Move right" /></div>
+</div>
+<script type="text/javascript">
+
+    var xmlURL = "./sheetViewExportXML.action?metaData.siteID=13187&metaData.sheetId=1045&metaData.sheetViewID=5641&metaData.isheetExportType=xml";
+
+    /* the variable that will hold the iSheet XML data */
+    var xml;
+    /*
+     Load the XML feed, assign it to the variable and then call a function to generate the visualization.
+     Don’t call the function until the data has loaded.
+     */
+    $j.ajax({
+        url: xmlURL,
+        dataType: "xml",
+        success: function(data)
+        {
+            xml = data;
+            createVisualization();
+        },
+        error: function()
+        {
+            alert("Error loading iSheet data.");
+            return;
+        }
+    });
+
+</script><script>
+
+    function createVisualization() {
+
+        var columns = {};
+        var xmlColumns = $j('head',xml);
+        xmlColumns.find('headColumn').each(function() {
+            var columnName = $j(this).find('columnValue').text();
+            var columnID = $j(this).attr('columnid');
+            columns[columnName] = columnID;
+        });
+
+        var xmlData = $j('data',xml);
+
+        var data = [];
+        var counter = 0;
+        var startDate;
+        var endDate = "";
+        var headline;
+        var style;
+        var group;
+
+        xmlData.find('item').each(function() {
+
+            $j(this).find('column').each(function() {
+                var colID = $j(this).attr("columnid");
+                var value = $j(this).find('displayData').text();
+
+                if(colID == columns["InteractionType"])
+                {
+                    headline = value;
+                }
+                else if(colID == columns["InteractionDate"])
+                {
+                    startDate = new Date(value);
+                }
+                else if(colID == columns["Regulator"])
+                {
+                    if(value == "FCA")
+                    {
+                        style = "color: black; background-color: red;"
+                    }
+                    else if(value == "SFO")
+                    {
+                        style = "color: white; background-color: blue;"
+                    }
+                    else if(value == "DOJ")
+                    {
+                        style = "color: black; background-color: orange;"
+                    }
+                    else if(value == "CFTC")
+                    {
+                        style = "color: black; background-color: green;"
+                    }
+                    else if(value == "DFS")
+                    {
+                        style = "color: black; background-color: purple;"
+                    }
+                    else if(value == "HKMA")
+                    {
+                        style = "color: white; background-color: black;"
+                    }
+                    else if(value == "BAFIN")
+                    {
+                        style = "color: black; background-color: grey;"
+                    }
+                    else
+                    {
+                        style = "color: black; background-color: pink;"
+                    }
+                }
+
+            });
+
+            var timelineItem = {};
+            timelineItem.id = ++counter;
+            timelineItem.content = headline;
+            timelineItem.start = startDate;
+            timelineItem.style = style;
+            if(endDate != null)
+            {
+                timelineItem.end = endDate;
+            }
+            data.push(timelineItem);
+
+            startDate  = null;
+            endDate = null;
+            headline = null;
+        });
+
+        var groups = new vis.DataSet([
+            {"content": "FCA", "id": "FCA", "value": 1},
+            {"content": "SFO", "id": "SFO", "value": 2},
+            {"content": "DOJ", "id": "DOJ", "value": 3},
+            {"content": "CFTC", "id": "CFTC", "value": 4},
+            {"content": "DFS", "id": "DFS", "value": 5},
+            {"content": "HKMA", "id": "HKMA", "value": 6},
+            {"content": "BAFIN", "id": "BAFIN", "value": 7}
+        ]);
+
+        var items = new vis.DataSet(data);
+        var container = document.getElementById('visualization');
+        var options = {};
+        var timeline = new vis.Timeline(container);
+        timeline.setOptions(options);
+
+        timeline.setItems(items);
+    }
+</script>

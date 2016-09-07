@@ -14,4 +14,3 @@ else
     console.log("I am null or undefined");
     console.log("val=" + val); // todo Delete me!
 }
-

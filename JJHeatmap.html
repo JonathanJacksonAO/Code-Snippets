@@ -1,0 +1,754 @@
+<link href="./flag/flag_2540.action" media="screen" rel="stylesheet" type="text/css" />
+<style type="text/css">#siteHomeContent, .pageWrapper.mainPanel #main, .pageWrapper.mainPanel #sub{background:#FFFFFF;}
+#map{overflow:hidden; border:#a8a8a8 solid 1px; width: auto; height: 444px; position:relative; margin-top: 0;}
+#map-table-div{height: 444px; overflow: auto; border:#a8a8a8 solid 1px; position:relative;}
+#map-table{ width:100%; border-collapse: collapse;}
+.map-all-link{ background:#757575;}
+#map-table tr.map-high, .map-high-link{background:#9a301d;}
+#map-table tr.map-medium, .map-medium-link{background:#ffcc00;}
+#map-table tr.map-low, .map-low-link{background:#005c4c;}
+#map-table tr.map-empty, .map-empty-link{background:#000000;}
+
+#map-table tr.map{}
+
+#map-table tr.map-head th{padding:5px 8px; font-weight:bold; color:#333333; font-size:12px; border-bottom: 1px solid #a8a8a8;}
+#map-table tr td {padding:5px 8px; font-weight:bold; font-size:12px;}
+#map-table tr td a{font-size:12px; font-weight:bold; }	/* color:#FFF; */
+#map-table tr.map-medium td a, #map-table tr.map-medium td{color:#2f2f2f;}
+#map-dialog{overflow-x:hidden; display:none;}
+.map-toggle-buttons a{ font-size:12px; color:#FFF; padding:5px 8px; display:inline-block; margin-right:5px; text-decoration:none;
+    min-width:48px; text-align: center;}
+.map-toggle-buttons a:hover{text-decoration:underline; color:#FFF;}
+.row-fluid .span3.deviceSpan3{margin-top:0px !important; width:23.4043% !important;}
+.iframe-Map{width:100%; height:100%; display:block;}
+.ui-dialog .ui-dialog-title {width: 100%; text-align: center; font-size: x-large; padding: 3px;}
+.jvectormap-tip {background:#292929; border:1px solid #cdcdcd; border-radius: 3px; color:#FFF; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height:normal;
+    padding-bottom:0px; padding-top:10px; padding-right:10px; padding-left:10px;}
+.map-tip-title{ font-size: 14px; display: block; border-bottom: solid 1px #949494; padding:0px 0px 5px; margin:0px 0px 5px;}
+.map-tip-label{color:#c4c4c4;}
+
+table.tablesorter thead tr .header {
+    /*background-image: url(./flag/flag_2553.action);*/ /* bg.gif */
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+table.tablesorter thead tr .headerSortUp {
+    /*background-image: url(./flag/flag_2554.action);*/ /* asc.gif */
+}
+table.tablesorter thead tr .headerSortDown {
+    /*background-image: url(./flag/flag_2555.action);*/ /* desc.gif */
+}
+.riskTopic{
+    background-color: #757575;
+    color: #fff;
+    padding: 0 15px 5px 0;
+}
+.clientLogo {
+    background-color: white;
+    text-align: center;
+    border-top: 1px solid #a8a8a8;
+    border-left: 1px solid #a8a8a8;
+    border-right: 1px solid #a8a8a8;
+}
+.setMinHeight{
+    min-height: 34px;
+    line-height: 34px;
+}
+
+/* http://stackoverflow.com/questions/16754090/how-to-show-in-html-a-circle-filled-by-one-color-within-a-cell-table */
+.map-circle-contents{display:none;}
+.map-circle{width:10px; height:10px; display:inline-block; border-radius:10px;}
+.circle-empty{background: #000000;}
+.circle-low{background: #005c4c;}
+.circle-medium{background: #ffcc00;}
+.circle-high{background: #9a301d;}
+.dataSymbol{width:10px; height:10px; display:inline-block; border-radius:10px; background:#006595; position:relative; top:4px; margin-right:10px;}
+.RPD-color{ background:#afb2d8;}
+.GC-color{ background:#a89c90;}
+.DRG-color{ background:#83958d;}
+.ALT-color{ background:#bcb28a;}
+.NL-color{ background:#459abd;}
+.MKL-color{ background:#53812c;}
+@media (max-device-width:1024px) {
+    #map-table-div, #map{height:330px;}
+    .map-toggle-buttons a{min-width: 30px;}
+}
+@media (max-device-width:980px) {
+    .riskTopic, .map-toggle-buttons {float: none;}
+}
+@media (max-device-width:767px) {
+    .maparea, .dataBasesar{ left:auto;}
+    #map{height:300px;}
+    #map-table-div{margin-left:0px;}
+    .row-fluid .span3.deviceSpan3, .row-fluid .span9.deviceSpan9{ width:100% !important; display:block; float:none; margin-bottom:15px;}
+    table#map-icon-sec tbody > tr > td{display:block; width:auto;}
+    .map-icon-sec-title{ padding:12px 8px; height:auto;}
+    .tableIconTitle{max-width:none;}
+    .dataSymbol{ top:1px;}
+    #map-table-div{height:auto; overflow:visible;}
+}
+</style>
+<div id="loading-div">Loading Map&nbsp;<!--img src="./flag/flag_3125.action" /--></div>
+
+<div class="row-fluid" id="overall-div" style="display:none">
+    <div class="span9 deviceSpan9 maparea"><!--div class="clientLogo"><img alt="" src="./flag/flag_3078.action" style="width: 116px; height: 44px;" /></div-->
+        <div id="map">&nbsp;</div>
+        <!-- ** hiding this for now, the buttons to toggle between high, medium, low and all -->
+
+        <div class="map-toggle-buttons pull-left" style="display:none"><a class="togglemap map-high-link" href="#" risklevel="High">High</a> <a class="togglemap map-medium-link" href="#" risklevel="Medium" style="color: black;">Medium</a> <a class="togglemap 	map-low-link" href="#" risklevel="Low">Low</a> <a class="togglemap map-all-link" href="#" risklevel="[ALL]">All</a></div>
+        <!-- **get the topics dynamically? --><!-- class="pull-right" --><!-- <label class="riskTopic">Risk Type:</label> -->
+
+        <div id="risk-topic-div">Risk Type: <select id="risk-topic"><option value="Overall Risk">Overall Risk</option><option value="SCF Risk">SCF Risk</option><option value="ICRF Risk">ICRF Risk</option> </select></div>
+    </div>
+
+    <div class="span3 pull-right deviceSpan3">
+        <div id="map-table-div">&nbsp;</div>
+    </div>
+</div>
+
+<div id="map-dialog"><iframe class="iframe-Map" frameborder="0" id="map-iframe" marginheight="0" marginwidth="0"></iframe></div>
+
+
+<script type="text/javascript" language="javascript" src="./libs/jquery3/jquery-3.0.0.min.js"></script>
+
+<!-- jvectormap --><!--script type="text/javascript" language="javascript" src="./flag/flag_2542.action"></script-->
+<script type="text/javascript" language="javascript" src="./libs/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+
+<!-- global  map --><script type="text/javascript" language="javascript" src="./flag/flag_2543.action"></script>
+<!-- accounting --><script type="text/javascript" language="javascript" src="./flag/flag_2544.action"></script>
+<!-- jquery.tablesorter --><script type="text/javascript" language="javascript" src="./flag/flag_2546.action"></script><script>
+    var initialLoad = true;
+
+    var wWidth = $(window).width() * .8;
+    //http://jsfiddle.net/H7uar/1/
+    // scroll bar issue:  http://stackoverflow.com/questions/13892289/scroll-bar-issue-with-jquery-modal-dialog-using-iframe
+    //http://stackoverflow.com/questions/13520139/jquery-ui-dialog-cannot-call-methods-on-dialog-prior-to-initialization
+//    var theDialog = $( "#map-dialog" ).dialog({
+//        autoOpen:false,
+//        modal:true,
+//        resizable: false,
+//        width: wWidth,
+//        height: 700,
+//        position: {my: "center top", at:"center top", of: window },
+//    });
+
+    /* to make the hover and click work consistently on mobile devices */
+    var lastCode = "";
+
+    var ios = (/iPhone|iPad|iPod/i.test(navigator.userAgent) );
+    var android = (/Android/i.test(navigator.userAgent) );
+    var myNav = navigator.userAgent.toLowerCase();
+    var IEVersion = (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+
+    $(window).load(function(){
+        getheightHome();
+    });
+
+    /*
+     getting an error the third time you pick a score:
+
+     Error: Invalid value for g attribute transform="scale(NaN) translate(NaN, NaN)
+     doesn't seem to affect anything, however, so will ignore for now
+
+     a possible fix:  http://stackoverflow.com/questions/24675032/d3-js-error-invalid-value-for-g-attribute-transform-translatenan-5
+     */
+    $(window).resize(function(){
+        getheightHome();
+    });
+
+    function getheightHome(){
+        var windowHeight = $(window).height();
+        var allOthers = ($('.LogoWrapper').outerHeight(true)) + ($('footer').outerHeight(true)) + ($('.moduleMenu').outerHeight(true)) + ($('.blueHeader').outerHeight(true));
+        var docListheight = windowHeight - allOthers;
+        $('.columnDocList').css({'height': (docListheight) + 'px'});
+    }
+
+    /* iSheetData */
+    /* hardcode the siteID and sheetID for the link to the iSheet items */
+    var siteID = 13187; //5248; //7172;
+    var sheetID = 1206; //957; //942;
+    var viewID = 5897; //5222; //5144;
+    // https://www.aocollaborate.com/aocollaborate/sheetViewExportXML.action?metaData.siteID=5248&metaData.sheetId=957&metaData.sheetViewID=5222&metaData.isheetExportType=xml
+    // var xmlFeed = "./sheetViewExportXML.action?metaData.siteID=" + siteID + "&metaData.sheetId=" + sheetID + "&metaData.sheetViewID=" + viewID + "&metaData.isheetExportType=xml";
+    var xmlFeed = "./HeatmapData/ItemData.xml";
+
+    /* the map object */
+    var map;
+    var mapData = {};
+    var riskTopics = [];
+    //http://stackoverflow.com/questions/14965181/jvectormap-1-2-2-color-issue
+    /* the initial color of all countries */
+    var regionStyling = {initial: {fill: '#93959b'}};
+
+    var currentRiskTopic = "Overall Risk"; // this means the overall score is the basis by default
+
+    /* xml data */
+    var xml;
+
+    /* This kicks off everything */
+    loadSheetData();
+
+    function loadSheetData()
+    {
+        $.ajax({
+            url: xmlFeed,
+            dataType: "xml",
+            success: function(data) {
+                xml = data;
+                console.log("xml",xml);
+                getColumnInfo();
+            },
+            error: function() {
+                alert("Error loading iSheet data.  The map will not be displayed.");
+                return;
+            }
+        });
+    } // end loadSheetData
+
+
+    /* all of the stuff that should happen */
+
+    var columns = {};
+    //** don't really need this
+    var columnIds = {};
+
+    function getColumnInfo()
+    {
+        var xmlColumns = $('head',xml);
+
+        console.log("xmlColumns",xmlColumns);
+
+        xmlColumns.find('headColumn').each(function() {
+
+            var columnName = $(this).find('columnValue').text();
+            var columnID = $(this).attr('columnid');
+
+            columnIds[columnName] = columnID;
+            columns[columnID] = columnName;
+
+            console.log("column", columnName, columnID);
+
+            if(columnName != "Name of Jurisdiction" && columnName != "Country Code")
+            {
+                riskTopics.push(columnName);
+            }
+
+        }); // end loop
+
+        console.log("riskTopics",riskTopics);
+
+        /* Add the topics to the pull down menu */
+        for(var i = 0; i != riskTopics.length; ++i)
+        {
+            $("#risk-topic").append(new Option(riskTopics[i],riskTopics[i]));
+        }
+
+// load the map data
+        getMapData();
+    } // end getColumnInfo
+
+    function getMapData()
+    {
+        var xmlData = $('data',xml);
+        console.log("xmldata",xmlData);
+        var itemID;
+        var rowData;
+        var countryCode;
+        var overallRiskScore;
+        var scfRiskScore;
+        var icrfRiskScore;
+
+//https://forum.jquery.com/topic/selecting-xml-node-by-attribute
+        xmlData.find('item').each(function() {
+            rowData = {};
+            countryCode = "";
+            overallRiskScore = "No information";
+            scfRiskScore = "No information";
+            icrfRiskScore = "No information";
+
+
+            itemID = $(this).find("itemID").text();
+            rowData["ItemID"] = itemID;
+
+// inner loop
+            $(this).find('column').each(function() {
+
+//console.log("this", $(this).attr("columnid"));
+                var colID = $(this).attr("columnid");
+                var value = $(this).find('displayData').text();
+                var colName = columns[colID];
+
+                console.log(colID,value, colName);
+
+                if(colName != "Country Code")
+                {
+                    rowData[colName] = value;
+
+                    if(colName != "Name of Jurisdiction")
+                    {
+                        console.log("before country",countryCode,colName,"current score",overallRiskScore,"value",value);
+                        if(value == "High risk")
+                        {
+                            overallRiskScore = value;
+                        }
+                        else if(value == "Medium risk" && overallRiskScore != "High risk")
+                        {
+                            overallRiskScore = value;
+                        }
+                        else if(value == "No risk" && overallRiskScore == "No information")
+                        {
+                            overallRiskScore = value;
+                        }
+                        console.log("after country",countryCode,colName,"current score",overallRiskScore,"value",value);
+
+//scf
+                        if(colName.indexOf("SCF") != -1)
+                        {
+                            if(value == "High risk")
+                            {
+                                scfRiskScore = value;
+                            }
+                            else if(value == "Medium risk" && scfRiskScore != "High risk")
+                            {
+                                scfRiskScore = value;
+                            }
+                            else if(value == "No risk"  && overallRiskScore == "No information")
+                            {
+                                scfRiskScore = value;
+                            }
+                        }
+
+//scf
+
+//icrf
+                        if(colName.indexOf("ICRF") != -1)
+                        {
+                            if(value == "High risk")
+                            {
+                                icrfRiskScore = value;
+                            }
+                            else if(value == "Medium risk" && icrfRiskScore != "High risk")
+                            {
+                                icrfRiskScore = value;
+                            }
+                            else if(value == "No risk"  && overallRiskScore == "No information")
+                            {
+                                icrfRiskScore = value;
+                            }
+                        }
+
+//icrf
+
+                    }
+                }
+                else
+                {
+                    countryCode = value;
+                }
+
+//console.log("display data", $(this).find('displayData').text());
+            }); // end inner loop
+
+            console.log("countrycode","|" + countryCode + "|");
+
+// skip if no country code
+            if(countryCode != '')
+            {
+                rowData["Overall Risk"] = overallRiskScore;
+                rowData["SCF Risk"] = scfRiskScore;
+                rowData["ICRF Risk"] = icrfRiskScore;
+                mapData[countryCode] = rowData;
+            }
+        }); // end outer loop
+
+        console.log("mapData",mapData);
+
+        drawMap();
+    } // end getMapData
+
+
+    /*
+     Draw the map
+     This can be called again, if necessary
+     */
+    //** not sure what this does
+    var currentColor = "Acolor";
+
+    function drawMap()
+    {
+//console.log("json in drawmap ", JSON.stringify(mapData));
+
+        // clear this out; it helps with the refresh issue in mobile, where the page loads twice
+        $("#map").empty();
+        // http://stackoverflow.com/questions/1078118/how-do-i-iterate-over-a-json-structure
+// check to see if there is EU data from the iSheet
+        var niDataExists = ("ND" in mapData);
+
+// the color applies to EU, only for IE8 which uses the circles, not the icons
+//** now sure what this does, commented out for now
+//var markerNIColor =  mapData["ND"][currentColor];
+
+// which flag icon to  use for all browsers but ID, based on the risk level
+        var flagImg;
+        if(mapData["ND"][currentRiskTopic] == "High risk")
+        {
+            flagImg = "./flag/flag_2574.action"; //flag-icon-eu-red
+        }
+        else if(mapData["ND"][currentRiskTopic] == "Medium risk")
+        {
+            flagImg = "./flag/flag_2576.action"; //flag-icon-eu-yellow
+        }
+        else if(mapData["ND"][currentRiskTopic] == "No risk")
+        {
+            flagImg = "./flag/flag_2575.action"; //flag-icon-eu-green
+        }
+//** NEED THE NO INFO ICON
+        else // No information
+        {
+            flagImg = "./flag/flag_3128.action"; //flag-icon-eu-black
+        }
+
+// If using IE8, then make this value meaningless, so that icons for NI are not used
+        var imgAttribute = 'image';
+        if(IEVersion == 8)
+        {
+            imgAttribute = 'imageoff';
+        }
+
+        var niMarkers;
+        if(niDataExists)
+        {
+            niMarkers = [{latLng: [56., -11.1], name: 'Northern Ireland'}];
+        }
+        else
+        {
+            niMarkers = [];
+        }
+
+
+        /* create the map */
+        map = new jvm.Map({
+            container: $('#map'),
+            map: 'world_mill_en', /* use the English world map */
+            /* Stuff for NI */
+            markerStyle: {
+                initial: {
+                    fill: '#383f47', /* ** need to fix markerNIColor, not sure what this does; seems to be ignored? */
+                    stroke: '#383f47',
+                    r: 7
+                }
+            },
+//-11
+
+            markers: niMarkers,
+//+12
+            series: {
+                markers: [{
+                    attribute: imgAttribute,
+                    scale: {
+                        'ND': flagImg
+                    },
+                    values: {0: 'ND'}
+                }],
+                regions: [{
+                    normalizeFunction: 'polynomial'
+                }]
+
+            },
+            onMarkerTipShow: function(event, label, code) {
+                var countryProperties = "";
+                $.each( mapData["ND"], function( key, value ) {
+                    if(key != "ItemID" && key != "Name of Jurisdiction")
+                    {
+                        countryProperties += '<span class="map-tip-label">' + key + ':</span> ' + value + '<p/>';
+                    }
+                });
+
+                console.log("countryProperties",countryProperties);
+
+                label.html('<div style="line-height:50%;"><span class="map-tip-title">' + label.html() + '</span><p/>' + countryProperties + '</div>');
+
+//     label.html('<div style="line-height:50%;"><span class="map-tip-title">' + mapData["EU"]["Jurisdiction"] + '</span><p/><span class="map-tip-label">Accenture Risk Score:</span> ' + mapData["EU"]["Ascore"] + '<p/><span class="map-tip-label">Legal Risk Score:</span> ' + mapData["EU"]["Lscore"] + '<p/><span class="map-tip-label">Revenues:</span> $' + mapData["EU"]["Revenues"] + '<p/><span class="map-tip-label">Headcount:</span> ' + formatValue(mapData["EU"]["Headcount"],"",",") + '<p/><span class="map-tip-label">Diamond Clients:</span> ' + formatValue(mapData["EU"]["Diamond"],"",",") + '<p/></div>');
+            },
+            onMarkerClick: function(e, code)
+            {
+                /*
+                 For Android devices, only respond to 2 clicks in a row
+                 So if there was no prior click or the prior click was for a different country,
+                 don't do anything, but do track what was clicked.
+                 Only do this if two clicks in a row were for the SAME country
+                 */
+                if (android && (lastCode = "" || lastCode != "ND"))
+                {
+                    lastCode = "ND";
+                    e.preventDefault();
+                    return;
+                }
+
+                // once we do it successfully, reset the lastCode, for mobile
+                lastCode = "";
+
+                // relative link to iSheet item
+                var href="./injectColumnViewItemPage.action?metaData.channelId=9&metaData.siteID=" + siteID + "&metaData.sheetId=" + sheetID + "&metaData.itemId=" + mapData["ND"]["ItemID"] + "&metaData.sheetViewID=0&metaData.viewMode=0&view=readonly&sheetItemLinkView=true";
+                // open the iSheet item in a new tab
+
+                $("#map-iframe").attr('src',href);
+                theDialog.dialog('option', 'title', mapData["ND"]["Name of Jurisdiction"]);
+                theDialog.dialog('open');
+                $('#map-iframe').contents().find('#divAddDocTable').css({'height':'auto'});
+            },
+//-12
+            /* End stuff for NI */
+            /* comment out
+             series: {
+             markers: [{
+             attribute: imgAttribute
+             }],
+             regions: [{
+             normalizeFunction: 'polynomial'
+             }]
+             },
+             end comment out */
+
+            zoomOnScroll: true,
+            regionStyle: regionStyling, /* default region/country colors */
+            backgroundColor: "#ffffff", /* ocean color */
+            /* these are the default values, so will likely  leave them out
+             http://alstechtips.blogspot.com/2013/09/how-to-add-user-interactivity-to.html
+             */
+            /* tool tip */
+            onRegionTipShow: function(e, el, code)
+            {
+                if(mapData[code])
+                {
+                    var countryProperties = "";
+                    /* loop through everything and show all of the values, except for certain columns */
+                    $.each( mapData[code], function( key, value ) {
+                        if(key != "ItemID" && key != "Name of Jurisdiction")
+                        {
+                            countryProperties += '<span class="map-tip-label">' + key + ':</span> ' + value + '<p/>';
+                        }
+                    });
+
+                    el.html('<div style="line-height:50%;"><span class="map-tip-title">' + el.html() + '</span><p/>' + countryProperties + '</div>');
+                }
+                // for any country not in the iSheet, do nothing on hover
+                else
+                {
+                    return false;
+                }
+            },
+            /* when click on a country */
+            onRegionClick: function(e, code)
+            {
+                /*
+                 For Android devices, only respond to 2 clicks in a row
+                 So if there was no prior click or the prior click was for a different country,
+                 don't do anything, but do track what was clicked.
+                 Only do this if two clicks in a row were for the SAME country
+                 */
+                if (android && (lastCode = "" || lastCode != code))
+                {
+                    lastCode = code;
+                    e.preventDefault();
+                    return;
+                }
+
+                if(mapData[code])
+                {
+                    // once we do it successfully, reset the lastCode, for mobile
+                    lastCode = "";
+
+                    // relative link to iSheet item
+                    var href="./injectColumnViewItemPage.action?metaData.channelId=9&metaData.siteID=" + siteID + "&metaData.sheetId=" + sheetID + "&metaData.itemId=" + mapData[code]["ItemID"] + "&metaData.sheetViewID=0&metaData.viewMode=0&view=readonly&sheetItemLinkView=true";
+                    console.log("link",href);
+                    // open the iSheet item in a new tab
+
+                    $("#map-iframe").attr('src',href);
+                    theDialog.dialog('option', 'title', mapData[code]["Name of Jurisdiction"]);
+                    theDialog.dialog('open');
+                    $('#map-iframe').contents().find('#divAddDocTable').css({'height':'auto'});
+
+                }
+                // for any country not in the iSheet, do nothing on hover
+                else
+                {
+                    lastCode = "";
+                    return false;
+                }
+            }
+        });
+
+//console.log("map done, set colors");
+        // set the colors based on the risk level, which is [ALL] by default
+        map.series.regions[0].setValues(getColors(currentRiskTopic));
+
+        createTable();
+
+// now that everything has loaded, show the map
+        if(initialLoad)
+        {
+            $("#loading-div").hide();
+            $("#overall-div").show();
+            initialLoad = false;
+        }
+
+        /* click on a country in the table
+         put this here so the items actually exist
+         */
+        $('.map-table-item').on('click',function(e)
+        {
+            // relative link to iSheet item
+            var code = $(this).attr("code");
+            console.log("click item", code);
+            var href="./injectColumnViewItemPage.action?metaData.channelId=9&metaData.siteID=" + siteID + "&metaData.sheetId=" +    sheetID + "&metaData.itemId=" + mapData[code]["ItemID"] + "&metaData.sheetViewID=0&metaData.viewMode=0&view=readonly&sheetItemLinkView=true";
+            console.log("link",href);
+
+            $("#map-iframe").attr('src',href);
+            theDialog.dialog('option', 'title', mapData[code]["Name of Jurisdiction"]);
+            theDialog.dialog('open');
+
+            $('#map-iframe').contents().find('#divAddDocTable').css({'height':'auto'});
+        });
+
+        $(window).load().trigger('resize');
+    }
+
+    /* Various support functions */
+    /*<![CDATA[*/
+    function createTable()
+    {
+        $("#map-table-div").empty();
+
+        var tbl = "<table id='map-table' class='tablesorter'><thead><tr class='map-head'><th> </th><th><div class='setMinHeight'>Country</div></th><th style='text-align:left'>Overall Risk</th></tr></thead><tbody>";
+
+        $.each(mapData, function(code, val)
+        {
+            var score = val["Overall Risk"];
+            var country = val["Name of Jurisdiction"];
+            /*
+             var rl;
+
+             if(score < 4)
+             {
+             rl = "Low";
+             }
+             else if(score < 8)
+             {
+             rl = "Medium";
+             }
+             else
+             {
+             rl = "High";
+             }
+             */
+
+//console.log(score,country);
+
+            var cls;
+            var circleCls;
+            var lmh;
+            if(score == "High risk")
+            {
+                cls = "map-high";
+                circleCls = "circle-high";
+                lmh = 3;
+            }
+            else if(score == "Medium risk")
+            {
+                cls = "map-medium";
+                circleCls = "circle-medium";
+                lmh = 2;
+            }
+//** what about Empty?
+            else if(score == "No risk")
+            {
+                cls = "map-low";
+                circleCls = "circle-low";
+                lmh = 1;
+            }
+            else // empty
+            {
+                cls = "map-empty";
+                circleCls = "circle-empty";
+                lmh = 0;
+            }
+
+            cls="map";
+
+            tbl = tbl + "<tr class='" + cls + "'><td align='center'><div class='map-circle " + circleCls + "'><div class='map-circle-contents'>" + lmh + "</div></div></td><td><a class='map-table-item' code='" + code + "'>" + country + "</a></td><td style='text-align:right'>" + score + "</td></tr>";
+        });
+
+        tbl = tbl + "</tbody></table>";
+
+//console.log(tbl);
+
+        $("#map-table-div").prepend(tbl);
+
+        $("#map-table").tablesorter( {sortList: [[2,1], [1,0]]}  );
+    } // end method
+    /*]]>*/
+
+    /* Format any numbers correctly */
+    function formatValue(value, currency, thousands)
+    {
+        var numDecimals = 0;
+        var decimalSymbol = ".";
+        /* value, currency (or none), number of decimals, thousands separator (or none), decimals separator (or . default) */
+        return accounting.formatMoney(value, currency, numDecimals, thousands, decimalSymbol);
+    }
+
+    /* scale is 1 to 10 */
+
+    /* Get the colors to show for each country, based on the selected risklevel or [ALL] */
+    function getColors(risklevel)
+    {
+        var colors = {};
+
+        $.each(mapData, function(code, val)
+        {
+            console.log(code, val);
+
+            var riskScore = val[risklevel];
+            /*<![CDATA[*/
+
+            /* Could likely make these CSS? */
+            if(riskScore == "High risk")
+            {
+                colors[code] = "#9a301d";
+            }
+            else if(riskScore == "Medium risk")
+            {
+                colors[code] = "#ffcc00";
+            }
+            else if(riskScore == "No risk")
+            {
+                colors[code] = "#005c4c";
+            }
+            else // EMPTY nothing entered for this one, so make it very light grey
+            {
+                colors[code] = "#000000";
+            }
+
+            /*]]>*/
+        });
+
+        console.log("colors",colors);
+
+        return colors;
+    }
+
+    /* change the risk topic */
+    $("#risk-topic").on("change",function(e)
+    {
+        currentRiskTopic = $(this).val();
+        console.log("currentRiskTopic",currentRiskTopic);
+        map.series.regions[0].clear();
+        map.series.regions[0].setValues(getColors(currentRiskTopic));
+
+        drawMap();
+    });
+
+</script>

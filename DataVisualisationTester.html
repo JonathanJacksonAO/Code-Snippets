@@ -8,18 +8,80 @@
     <script src="./libs/JVectorMap/jquery-jvectormap-2.0.3.min.js"></script>
     <script src="./libs/JVectorMap/jquery-jvectormap-world-mill.js"></script>
     <script src="./libs/JVectorMap/gdp-Data.js"></script>
+    <style type="text/css">#siteHomeContent, .pageWrapper.mainPanel #main, .pageWrapper.mainPanel #sub{background:#FFFFFF;}
+
+    #map{overflow:hidden; border:#a8a8a8 solid 1px; width:auto; height: 444px; position:relative; margin-top: 0;}
+    .map-all-link{ background:#757575;}
+
+    #map-table tr.map{}
+
+    .row-fluid .span3.deviceSpan3{margin-top:0px !important; width:23.4043% !important;}
+    .iframe-Map{width:100%; height:100%; display:block;}
+    .jvectormap-tip {background:#292929; border:1px solid #cdcdcd; border-radius: 3px; color:#FFF; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height:normal;
+        padding-bottom:0px; padding-top:10px; padding-right:10px; padding-left:10px;}
+    .map-tip-title{ font-size: 14px; display: block; border-bottom: solid 1px #949494; padding:0px 0px 5px; margin:0px 0px 5px;}
+    .map-tip-label{color:#c4c4c4;}
+
+    .setMinHeight{
+        min-height: 34px;
+        line-height: 34px;
+    }
+
+    @media (max-device-width:1024px) {
+        #map-table-div, #map{height:330px;}
+        .map-toggle-buttons a{min-width: 30px;}
+    }
+    @media (max-device-width:980px) {
+        .riskTopic, .map-toggle-buttons {float: none;}
+    }
+    @media (max-device-width:767px) {
+        .maparea, .dataBasesar{ left:auto;}
+        #map{height:300px;}
+        #map-table-div{margin-left:0px;}
+        .row-fluid .span3.deviceSpan3, .row-fluid .span9.deviceSpan9{ width:100% !important; display:block; float:none; margin-bottom:15px;}
+        table#map-icon-sec tbody > tr > td{display:block; width:auto;}
+        .map-icon-sec-title{ padding:12px 8px; height:auto;}
+        .tableIconTitle{max-width:none;}
+        .dataSymbol{ top:1px;}
+        #map-table-div{height:auto; overflow:visible;}
+    }
+    a.boxclose{
+        float:right;
+        margin-top:-10px;
+        margin-right:-10px;
+        cursor:pointer;
+        color: #fff;
+        border: 1px solid #ffffff;
+        /*border-radius: 30px;*/
+        background: #000000;
+        font-size: 20px;
+        font-weight: bold;
+        display: inline-block;
+        line-height: 0px;
+        padding:7px 2px 9px 3px;
+    }
+
+    .boxclose:before {
+        content: "x";
+        font-family: Arial,serif;
+    }
+    </style>
 </head>
 <body>
+    <div id="log"></div>
     <div id="world-map" style="width: 800px; height: 600px"></div>
-    <script>
+    <div id="x"></div>
+    <div id="y"></div>
+    <div id="customTip" class="jvectormap-tip"></div>
 
+    <script>
         $(function () {
             $('#world-map').vectorMap({
                 map: 'world_mill',
                 series: {
                     regions: [{
                         values: gdpData,
-                        scale: ['#C8EEFF', '#0071A4'],
+                        scale: ['#FFFF00', '#FF0000'],
                         normalizeFunction: 'polynomial',
                         legend: {
                             horizontal: true,
@@ -27,9 +89,46 @@
                         }
                     }]
                 },
+                onRegionClick: function (e, code) {
+                    var map = $('#world-map').vectorMap('get', 'mapObject');
+                    var customTip=$('#customTip');
+
+                    customTip.css({
+                        left: left,
+                        top: top
+                    })
+
+                    $('#world-map').vectorMap('get', 'mapObject').container.on( "mousemove", function( event ) {
+                        $( "#log" ).text( "pageX: " + event.pageX + ", pageY: " + event.pageY );
+                    });
+
+                    customTip.empty();
+                    customTip.append("<a class='boxclose' id='boxclose'></a>");
+                    customTip.append(map.tip.text());
+                    customTip.show();
+
+                    $('#boxclose').click(function(){
+                        map.clearSelectedRegions();
+                        customTip.hide();
+                    });
+//                    customTip.children("p").click(function(){
+//                        map.clearSelectedRegions();
+//                        customTip.hide();
+//                    })
+
+                },
                 onRegionTipShow: function (e, el, code) {
-                    el.html(el.html()+' (GDP - '+gdpData[code]+')');
+                    //el.html(el.html()+' (GDP - '+gdpData[code]+')'+'\r'+'Goblin');
+                    //el.html('<div style="line-height:50%;"><span class="map-tip-title">' + el.html() + ' (GDP - '+gdpData[code]+')' + '</span><p/>' + 'Goblins' + '</div>');
+
+                    e.preventDefault();
                 }
+            });
+            var left,top;
+            $('#world-map').vectorMap('get', 'mapObject').container.mousemove(function(e){
+                left = e.pageX;
+                top = e.pageY;
+
             });
         });
     </script>
