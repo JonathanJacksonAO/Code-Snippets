@@ -6,12 +6,19 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+<script type="application/javascript">
+    console.log(OverrideOrScore(1, 15));
 
-<script>
-    var aString = "Argos,AstraZeneca,Barclays,BP,British Telecommunications plc,Carillion plc,Lloyds Bank plc,Royal Bank of Scotland,RSA Insurance Group,Unilever,Vodafone";
-    var theLength = aString.split(",").length;
-    console.log(theLength);
+    function OverrideOrScore(orvalue, score) {
+        if (orvalue == 1)
+        {
+            return "[OR]";
+        }
+        else
+        {
+            return score;
+        }
+    }
 </script>
-
 </body>
 </html>

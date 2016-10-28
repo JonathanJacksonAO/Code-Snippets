@@ -149,15 +149,10 @@ a.boxclose{
         <div class="dataBases">
             <div class="dataBasesHead">Databases</div>
 
-            <div class="dataBasesbody">
-                <div class="dataBasesbodyRow"><span class="dataSymbol GC-color">&nbsp;</span><a href="./sheetHome.action?metaData.siteID=13187&amp;metaData.channelId=9&amp;metaData.sheetId=1317&amp;metaData.sheetViewID=6221">Reports</a></div>
-                <!--
-                <div class="dataBasesbodyRow"><span class="dataSymbol GC-color">&nbsp;</span><a href="./sheetHome.action?metaData.siteID=13187&amp;metaData.channelId=9&amp;metaData.sheetId=1313&amp;metaData.sheetViewID=6206">Risk Assessment iSheet</a></div>
-                -->
-
+            <div class="dataBasesbody"><!--
+<div class="dataBasesbodyRow"><span class="dataSymbol GC-color">&nbsp;</span><a href="./sheetHome.action?metaData.siteID=13187&amp;metaData.channelId=9&amp;metaData.sheetId=1313&amp;metaData.sheetViewID=6206">Risk Assessment iSheet</a></div>
+-->
                 <div class="dataBasesbodyRow"><span class="dataSymbol RPD-color">&nbsp;</span><a href="./sheetHome.action?metaData.siteID=5271&amp;metaData.channelId=9&amp;metaData.sheetId=609&amp;metaData.sheetViewID=0">Risk profile database</a></div>
-
-                <div class="dataBasesbodyRow"><span class="dataSymbol ALT-color">&nbsp;</span><a class="CKContextLink" href="sheetHome.action?metaData.siteID=5271&amp;metaData.channelId=9&amp;metaData.sheetId=764&amp;metaData.sheetViewID=0" id="{&quot;linkType&quot;:&quot;iSheet&quot;,&quot;channelID&quot;:9,&quot;siteID&quot;:&quot;5271&quot;,&quot;contextID&quot;:&quot;764&quot;,&quot;sheetViewID&quot;:&quot;0&quot;,&quot;linkedFromCKEditor&quot;:true}">Alerts</a></div>
                 <!--
                 <div class="dataBasesbodyRow"><span class="dataSymbol NL-color">&nbsp;</span><a href="http://www.allenovery.com/SiteCollectionDocuments/AllenOvery-LLP-Global-Cartel-Enforcement-2014-Year-in-Review.pdf">Newsletters</a></div>
                 -->
@@ -167,6 +162,10 @@ a.boxclose{
                 <div class="dataBasesbodyRow"><span class="dataSymbol ALT-color">&nbsp;</span><a href="">Training &amp; Education</a></div>
 
                 <div class="dataBasesbodyRow"><span class="dataSymbol ALT-color">&nbsp;</span><a href="">Monitoring &amp; Auditing</a></div>
+
+                <div class="dataBasesbodyRow"><span class="dataSymbol GC-color">&nbsp;</span><a href="./sheetHome.action?metaData.siteID=13187&amp;metaData.channelId=9&amp;metaData.sheetId=1317&amp;metaData.sheetViewID=6221">Reports</a></div>
+
+                <div class="dataBasesbodyRow"><span class="dataSymbol ALT-color">&nbsp;</span><a class="CKContextLink" href="sheetHome.action?metaData.siteID=5271&amp;metaData.channelId=9&amp;metaData.sheetId=764&amp;metaData.sheetViewID=0" id="{&quot;linkType&quot;:&quot;iSheet&quot;,&quot;channelID&quot;:9,&quot;siteID&quot;:&quot;5271&quot;,&quot;contextID&quot;:&quot;764&quot;,&quot;sheetViewID&quot;:&quot;0&quot;,&quot;linkedFromCKEditor&quot;:true}">Alerts</a></div>
 
                 <div class="dataBasesbodyRow"><span class="dataSymbol GC-color">&nbsp;</span><a href="./viewWikiPage.action?metaData.channelId=9&amp;metaData.siteID=5271&amp;metaData.wikiID=6852">Global A&amp;O contacts</a></div>
                 <!--div class="dataBasesbodyRow"><span class="dataSymbol MKL-color">&nbsp;</span><a href="">Merger content know how</a></div--></div>
@@ -382,6 +381,10 @@ a.boxclose{
                         value = Number(value);
                     }
                     record[colName] = value;
+                }
+                else if(colName == "Override value")
+                {
+                    record["Override"] = value;
                 }
                 <![CDATA[
                 else if(colName == "Accenture Risk Total")
@@ -644,7 +647,7 @@ a.boxclose{
                 //viewISheetRecord("EU");
                 // JJ Edit ***
                 var tipContent = getTipContent("EU");
-                var map = $j('#map').vectorMap('get', 'mapObject');
+                //var map = $j('#map').vectorMap('get', 'mapObject');
                 var customTip=$j('#customTip');
 
                 customTip.css({
@@ -669,7 +672,7 @@ a.boxclose{
                 //var closeDiv = $j("<div></div>").attr("id", "cDiv");
                 //$j("#customTip").append(closeDiv);
 
-                var riskAssessmentLink = $j("<a>Risk Assessment</a>").click(function(){viewISheetRecord("EU");});
+                var riskAssessmentLink = $j("<a>Risk Profile</a>").click(function(){viewISheetRecord("EU");});
                 $j("#riskAssessmentDiv").append(riskAssessmentLink);
 
                 var recentActivityLink = $j("<a>Recent Activity</a>").click(function(){viewRecentActivityISheetRecord("EU", "European Union");});
@@ -793,7 +796,7 @@ a.boxclose{
                     //viewISheetRecord(code);
                     //console.log("The country name is: " + mapData[code].Jurisdiction);
                     var tipContent = getTipContent(code);
-                    var map = $j('#map').vectorMap('get', 'mapObject');
+                    //var map = $j('#map').vectorMap('get', 'mapObject');
                     var customTip=$j('#customTip');
 
                     customTip.css({
@@ -818,7 +821,7 @@ a.boxclose{
                     //var closeDiv = $j("<div></div>").attr("id", "cDiv");
                     //$j("#customTip").append(closeDiv);
 
-                    var riskAssessmentLink = $j("<a>Risk Assessment</a>").click(function(){viewISheetRecord(code);});
+                    var riskAssessmentLink = $j("<a>Risk Profile</a>").click(function(){viewISheetRecord(code);});
                     $j("#riskAssessmentDiv").append(riskAssessmentLink);
 
                     var recentActivityLink = $j("<a>Recent Activity</a>").click(function(){viewRecentActivityISheetRecord(code, mapData[code].Jurisdiction);});
@@ -963,38 +966,64 @@ a.boxclose{
         //$j("#map-iframe").attr('src',href);
 
         // the value of a column in a record
-        var record;
+        //var record;
         // all of the data in the XMLData object
-        var records = $j('data',activityTrackingXmlData);
+        var activityTrackingRecords = $j('data',activityTrackingXmlData);
         var itemID;
+        var activityTrackingRecordCount = 0;
 
         /* The outer loop will loop through every item node in the XML file */
-        records.find('item').each(function()
+        activityTrackingRecords.find('item').each(function()
         {
             //record = {};
             itemID = $j(this).find('itemID').text();
             //record["ItemID"] = itemID;
 
-            // this is the URL for viewing an iSheet item.  Need itemID, siteID and sheetID
-            var href="./injectColumnViewItemPage.action?metaData.channelId=9&metaData.siteID=" + siteID + "&metaData.sheetId=" +    activityTrackingSheetID + "&metaData.itemId=" + itemID + "&metaData.sheetViewID=0&metaData.viewMode=0&view=readonly&sheetItemLinkView=true";
+            /* The inner loop loops through each column node in an item node */
+            $j(this).find('column').each(function() {
 
-            $j.ajax({
-                url: href,
-                success: function(data)
+                /* match up the metadata with the column information we already have */
+                var colID = $j(this).attr("columnid");
+                var colName = activityTrackingColumnNames[colID];
+
+                value = $j(this).find('displayData').text();
+                // just use these without changes
+                if(colName == "Geography")
                 {
-                    /* Once data has loaded, process it */
-                    $j('#map-iframe').contents().find('body').append(data);
-                },
-                error: function(jqXHR, textStatus,errorThrown )
-                {
-                    alert("Error loading recent activity html.");
-                    return;
+                    console.log("Value is: " + value + " and the countryName is: " + countryName);
+                    if(value == countryName)
+                    {
+                        activityTrackingRecordCount++;
+                        // this is the URL for viewing an iSheet item.  Need itemID, siteID and sheetID
+                        var href="./injectColumnViewItemPage.action?metaData.channelId=9&metaData.siteID=" + siteID + "&metaData.sheetId=" +    activityTrackingSheetID + "&metaData.itemId=" + itemID + "&metaData.sheetViewID=0&metaData.viewMode=0&view=readonly&sheetItemLinkView=true";
+
+                        $j.ajax({
+                            url: href,
+                            success: function(data)
+                            {
+                                /* Once data has loaded, process it */
+                                var activityRecord = data;
+                                $j('#map-iframe').contents().find('body').append(activityRecord);
+                            },
+                            error: function(jqXHR, textStatus,errorThrown )
+                            {
+                                alert("Error loading recent activity html.");
+                                return;
+                            }
+                        });
+                    }
+                    //record[colName] = value;
                 }
-            });
+            }); // end loop through each column
+
+
 
         }); // end loop through each column
 
-
+        if(activityTrackingRecordCount == 0)
+        {
+            $j('#map-iframe').contents().find('body').append("<div><strong>No activity records found for this country.</strong></div>");
+        }
 
         theDialog.dialog('option', 'title', mapData[countryCode]["Jurisdiction"]);
         theDialog.dialog('open');
@@ -1005,7 +1034,7 @@ a.boxclose{
     /* The content to show when you hover over a country or the EU image */
     function getTipContent(countryCode)
     {
-        return '<div style="line-height:50%;"><span class="map-tip-title">' + mapData[countryCode]["Jurisdiction"] + '</span><p/><span class="map-tip-label">Accenture Risk Score:</span> ' + mapData[countryCode]["Ascore"] + '<p/><span class="map-tip-label">Legal Risk Score:</span> ' + mapData[countryCode]["Lscore"] + '<p/><span class="map-tip-label">Revenues:</span> $' + mapData[countryCode]["Revenues"] + '<p/><span class="map-tip-label">Headcount:</span> ' + formatValue(mapData[countryCode]["Headcount"],"",",") + '<p/><span class="map-tip-label">Diamond Clients:</span> ' + formatValue(mapData[countryCode]["Diamond"],"",",") + '<p/></div>';
+        return '<div style="line-height:50%;"><span class="map-tip-title">' + mapData[countryCode]["Jurisdiction"] + formatOverrideValue(mapData[countryCode]["Override"]) + '</span><p/><span class="map-tip-label">Accenture Risk Score:</span> ' + mapData[countryCode]["Ascore"] + '<p/><span class="map-tip-label">Legal Risk Score:</span> ' + mapData[countryCode]["Lscore"] + '<p/><span class="map-tip-label">Revenues:</span> $' + mapData[countryCode]["Revenues"] + '<p/><span class="map-tip-label">Headcount:</span> ' + formatValue(mapData[countryCode]["Headcount"],"",",") + '<p/><span class="map-tip-label">Diamond Clients:</span> ' + formatValue(mapData[countryCode]["Diamond"],"",",") + '<p/></div>';
     }
 
     // need this in CDATA because the elements are not considered balanced by Collaborate
@@ -1022,6 +1051,7 @@ a.boxclose{
             var score = val[currentScore];
             var country = val["Jurisdiction"];
             var rl = val[currentRiskLevel];
+            var formattedOverrideValue = formatOverrideValue(val["Override"]);
 
 //console.log(score,country);
 
@@ -1049,7 +1079,7 @@ a.boxclose{
 
             cls="map";
 
-            tbl = tbl + "<tr class='" + cls + "'><td align='center'><div class='map-circle " + circleCls + "'><div class='map-circle-contents'>" + lmh + "</div></div></td><td><a class='map-table-item' code='" + code + "'>" + country + "</a></td><td style='text-align:right'>" + score + "</td></tr>";
+            tbl = tbl + "<tr class='" + cls + "'><td align='center'><div class='map-circle " + circleCls + "'><div class='map-circle-contents'>" + lmh + "</div></div></td><td><a class='map-table-item' code='" + code + "'>" + country + formattedOverrideValue + "</a></td><td style='text-align:right'>" + score + "</td></tr>";
         });
 
         tbl = tbl + "</tbody></table>";
@@ -1066,6 +1096,18 @@ a.boxclose{
         var decimalSymbol = ".";
         /* value, currency (or none), number of decimals, thousands separator (or none), decimals separator (or . default) */
         return accounting.formatMoney(value, currency, numDecimals, thousands, decimalSymbol);
+    }
+
+    function formatOverrideValue(orvalue)
+    {
+        if (orvalue == 1)
+        {
+            return " - [OR]";
+        }
+        else
+        {
+            return "";
+        }
     }
 
     /* Get the colors to show for each country, based on the selected risklevel or [ALL]
